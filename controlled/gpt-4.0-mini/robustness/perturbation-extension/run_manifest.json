@@ -1,0 +1,9 @@
+{
+  "model": "gpt-4o-mini-2024-07-18",
+  "measurements": 48,
+  "top_logprobs": 20,
+  "distenum_crosscheck": true,
+  "concurrency": 16,
+  "provider_rpm": 420,
+  "max_attempts": 8
+}

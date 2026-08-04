@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use these results, designs, or analysis code, please cite the accompanying paper."
+title: "Reproducibility archive for Calibrating Semantic Uncertainty from Observable Language-Model Probabilities"
+type: dataset
+authors:
+  - family-names: Dixon
+    given-names: Matthew
+version: 1.0.0
+date-released: 2026-08-03
+repository-code: "https://github.com/mfrdixon/BeliefLens-RSS-Reproducibility"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Dixon
+      given-names: Matthew
+  title: "Calibrating Semantic Uncertainty from Observable Language-Model Probabilities"
+  year: 2026

@@ -1,0 +1,150 @@
+{
+  "model": "gpt-4.1-mini-2025-04-14",
+  "archived_conditions": {
+    "ablate-definitions": {
+      "mean_js_to_canonical": {
+        "estimate": 0.0327184941016111,
+        "lower": 0.020436276212492974,
+        "upper": 0.04746723048449892
+      },
+      "mean_delta_reference_error": {
+        "estimate": 0.01958105939645418,
+        "lower": -0.010233383049791907,
+        "upper": 0.04907688922792458
+      },
+      "equivalence_rate_at_0.05": 0.7708333333333334
+    },
+    "ablate-evidence": {
+      "mean_js_to_canonical": {
+        "estimate": 0.22045520022915546,
+        "lower": 0.1483331025385537,
+        "upper": 0.2942089144195624
+      },
+      "mean_delta_reference_error": {
+        "estimate": 0.1725082665097871,
+        "lower": 0.10568653701598006,
+        "upper": 0.24519223624232095
+      },
+      "equivalence_rate_at_0.05": 0.3333333333333333
+    },
+    "ablate-prior": {
+      "mean_js_to_canonical": {
+        "estimate": 0.010333261452392736,
+        "lower": 0.0061012487024635935,
+        "upper": 0.015094791723148487
+      },
+      "mean_delta_reference_error": {
+        "estimate": 0.004789988616895782,
+        "lower": -0.0072366528874517715,
+        "upper": 0.017476799799666393
+      },
+      "equivalence_rate_at_0.05": 0.9791666666666666
+    },
+    "equiv-evidence-first": {
+      "mean_js_to_canonical": {
+        "estimate": 0.04902235499531483,
+        "lower": 0.02434425175355385,
+        "upper": 0.079834560444459
+      },
+      "mean_delta_reference_error": {
+        "estimate": 0.026053325025241453,
+        "lower": -0.0028115668125466525,
+        "upper": 0.05805860837118272
+      },
+      "equivalence_rate_at_0.05": 0.7083333333333334
+    },
+    "equiv-prose": {
+      "mean_js_to_canonical": {
+        "estimate": 0.009522065532109778,
+        "lower": 0.003790809431262591,
+        "upper": 0.016733621822136995
+      },
+      "mean_delta_reference_error": {
+        "estimate": -0.0021820446253301116,
+        "lower": -0.02111959863832571,
+        "upper": 0.015296345844114797
+      },
+      "equivalence_rate_at_0.05": 0.9375
+    }
+  },
+  "new_conditions": {
+    "contradict-replace-one": {
+      "token_tv": {
+        "estimate": 0.17360545444914888,
+        "lower": 0.037930461316323695,
+        "upper": 0.35609754095527346
+      },
+      "constrained_full_law_tv": {
+        "estimate": 0.1736054632789691,
+        "lower": 0.03793049490001021,
+        "upper": 0.35609753209460515
+      },
+      "posterior_js": {
+        "estimate": 0.09039808949667262,
+        "lower": 0.056703987371944445,
+        "upper": 0.1256920591619705
+      },
+      "reference_js_change": {
+        "estimate": 0.17724191698730515,
+        "lower": 0.11539358554436269,
+        "upper": 0.2335557009563133
+      },
+      "directional_inner_product": {
+        "estimate": 0.23571586153223642,
+        "lower": 0.13255087008514968,
+        "upper": 0.34350763948533863
+      },
+      "direction_correct_rate": 0.9583333333333334,
+      "mean_directional_cosine": 0.8378731779483628,
+      "minimum_observed_candidate_mass": 0.9999999139099771,
+      "maximum_residual_mass": 8.609002299930779e-08
+    },
+    "irrelevant-distractor": {
+      "token_tv": {
+        "estimate": 0.04709418777412567,
+        "lower": 0.0014008095094910778,
+        "upper": 0.12712111327930942
+      },
+      "constrained_full_law_tv": {
+        "estimate": 0.0470942036822341,
+        "lower": 0.0014008434517458574,
+        "upper": 0.12712112554369492
+      },
+      "posterior_js": {
+        "estimate": 0.016821063468799288,
+        "lower": 0.004353716694253873,
+        "upper": 0.032514137705094315
+      },
+      "reference_js_change": {
+        "estimate": 5.750165990892266e-17,
+        "lower": -3.9099752235719064e-18,
+        "upper": 1.4124444660256323e-16
+      },
+      "directional_inner_product": {
+        "estimate": 1.1067827306117443e-12,
+        "lower": -2.1903946347465702e-13,
+        "upper": 3.313411370088849e-12
+      },
+      "direction_correct_rate": 0.4166666666666667,
+      "mean_directional_cosine": 0.032332191880220296,
+      "minimum_observed_candidate_mass": 0.999999873696479,
+      "maximum_residual_mass": 1.2630352064224581e-07
+    }
+  },
+  "calibration_linear_operator_norm": 0.38039442264963574,
+  "constrained_response_law_audit": {
+    "law": "four-outcome law on enum A/B/C plus aggregated residual mass",
+    "minimum_candidate_mass": 0.9999998082667241,
+    "maximum_residual_mass": 1.9173327592270084e-07,
+    "completeness_threshold": 0.999999,
+    "passes_completeness_threshold": true,
+    "interpretation": "The structured response fixes all syntax and restricts the only stochastic scientific field to the three enum codes. The residual bin preserves numerical/top-k mass rather than silently renormalizing it."
+  },
+  "scope": {
+    "unrestricted_free_text_law_observed": false,
+    "constrained_structured_response_law_observed": true,
+    "candidate_conditional_tv_observed": true,
+    "theorem_input_status": "complete for the declared constrained enum experiment up to the explicitly retained residual bin; not a claim about unrestricted free-text continuation law",
+    "multiple_testing": "two primary new contrasts: irrelevant distractor equivalence and contradiction directional alignment"
+  }
+}

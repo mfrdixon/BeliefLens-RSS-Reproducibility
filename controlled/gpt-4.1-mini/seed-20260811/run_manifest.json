@@ -1,0 +1,9 @@
+{
+  "model": "gpt-4.1-mini",
+  "measurements": 660,
+  "top_logprobs": 20,
+  "distenum_crosscheck": true,
+  "concurrency": 4,
+  "provider_rpm": 420,
+  "max_attempts": 8
+}

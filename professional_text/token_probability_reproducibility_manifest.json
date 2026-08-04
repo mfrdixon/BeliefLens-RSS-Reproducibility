@@ -1,0 +1,47 @@
+{
+  "schema_version": "beliefbench-token-audit-v1",
+  "experiment": "market-commentary-v3.1",
+  "requested_model": "gpt-4.1-mini",
+  "provider": "openai",
+  "api_surface": "chat.completions",
+  "temperature": 0,
+  "top_logprobs_requested": 20,
+  "maximum_completion_tokens": 1,
+  "authoritative_probability_tool": {
+    "name": "BeliefBench raw OpenAI logprob parser",
+    "beliefbench_source_version": "0.8.0",
+    "installed_distribution_version": "0.1.0",
+    "parser_module": "beliefbench.token_probs.openai_parser",
+    "distenum_used": false,
+    "distenum_reason": "bare-character pilot output was not an eligible structured JSON enum response",
+    "distenum_installed_version": "0.1.1",
+    "confirmatory_policy": "raw parser authoritative; distenum cross-check required for eligible structured JSON enum responses and may never overwrite raw results"
+  },
+  "dependencies": {
+    "openai": "2.45.0",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:11:29) [Clang 20.1.8 ]",
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+  },
+  "token_event_definition": "union of exact one-token code forms differing only by surrounding whitespace",
+  "candidate_sets": {
+    "relevance": {
+      "A": "Direct",
+      "B": "Indirect",
+      "C": "Insufficient"
+    },
+    "orientation": {
+      "A": "Risk-on",
+      "B": "Mixed",
+      "C": "Risk-off",
+      "D": "Unsure"
+    }
+  },
+  "prompt_hashes_sha256": {
+    "system": "522b3a5588e228d914f5bcba273c58885455ff4ee52f268df14df6986b51b475",
+    "definitions": "669497cd8f46b9d21948ea963ed913b327035c8a4be01563c0e21ce917236a06",
+    "categorical_schema": "e35666599b33ad9acdc297840242dd9fc6f31d426e88caff5f6686cdb0e08d6a",
+    "elicited_schema": "eddc411d31bfc05c13dbd81d16f972bf6d01b5170417fac7d4b8a8d7bc4d059f"
+  },
+  "per_response_fields": "response_id, returned_model, system_fingerprint, service_tier, provider timestamp, token usage, returned alternative count, parsed alternatives, raw token/logprob/bytes, observed candidate mass, missing candidates",
+  "legacy_note": "Measurements captured before schema v1 may lack provider top_logprobs_returned; parsed_alternatives is retained and marked as reconstructed, never silently substituted."
+}

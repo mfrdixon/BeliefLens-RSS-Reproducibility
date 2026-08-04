@@ -1,0 +1,21 @@
+{
+  "fixed_question": "What risk orientation does this market observation express for US broad equities over the next five trading days?",
+  "keys": {
+    "d": "Direct",
+    "i": "Indirect",
+    "x": "Insufficient",
+    "1": "Risk-on",
+    "2": "Mixed",
+    "3": "Risk-off",
+    "4": "Unsure",
+    "h": "High",
+    "m": "Medium",
+    "l": "Low"
+  },
+  "rules": [
+    "Use only the displayed observation.",
+    "Mixed means balanced implications; Unsure means no defensible orientation.",
+    "Rates and credit may be Indirect or Unsure when their equity implication is genuinely ambiguous.",
+    "Insufficient must be paired with Unsure and explained."
+  ]
+}

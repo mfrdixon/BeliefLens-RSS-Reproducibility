@@ -1,0 +1,51 @@
+{
+  "estimand": "smallest singular value of the training-only affine forward map from exact posterior ALR to token ALR",
+  "unit_of_resampling": "scenario (all repeats retained)",
+  "bootstrap_replicates": 5000,
+  "training_scenarios": 240,
+  "training_measurements": 1200,
+  "function_class": "affine",
+  "forward_matrix": [
+    [
+      1.3751181519424172,
+      2.03012138871729
+    ],
+    [
+      -1.7162554949131137,
+      5.4720011858231254
+    ]
+  ],
+  "forward_intercept": [
+    -10.672953426092505,
+    -7.208704341060211
+  ],
+  "singular_values": [
+    5.956955575622852,
+    1.8480673570662693
+  ],
+  "minimum_singular_value": 1.8480673570662693,
+  "minimum_singular_value_ci": [
+    1.600430621057676,
+    2.028145115844659
+  ],
+  "condition_number": 3.223343322875024,
+  "empirical_lower_modulus": 0.0,
+  "empirical_lower_modulus_ci": [
+    0.0,
+    0.0
+  ],
+  "posterior_domain": {
+    "dimension": 2,
+    "rows": 240
+  },
+  "design_fill_distance": 0.0,
+  "observable": true,
+  "residual_metrics": {
+    "mse": 54.02096658501543,
+    "rmse": 7.3498956853152295,
+    "max_abs": 16.624311238335466
+  },
+  "warnings": [],
+  "bootstrap_lower_bound_95": 1.600430621057676,
+  "scope_warning": "A positive affine bootstrap bound is local empirical evidence, not a proof of global nonlinear observability."
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "belieflens-rss-uncertainty-budget-v1",
+  "metric": "squared Aitchison distance (squared Euclidean distance in ILR coordinates)",
+  "exact_identity": "total = within-scenario service variation + stable scenario-level recovery error",
+  "calibration_note": "Bootstrap prediction variation is an auxiliary diagnostic nested within recovery uncertainty, not an additional orthogonal variance term.",
+  "conditioning_scope": {
+    "fixed_objects": [
+      "semantic map",
+      "reference experiment"
+    ],
+    "sensitivity_dimensions": [
+      "alternative ontology",
+      "external validity"
+    ]
+  },
+  "results": [
+    {
+      "model": "GPT-4.1-mini-2025-04-14",
+      "test_scenarios": 100,
+      "repeats": 500,
+      "total_aitchison_mse": 3.8593659331975085,
+      "service_aitchison_mse": 0.06908619419305015,
+      "service_share_percent": 1.7900918282659921,
+      "stable_recovery_aitchison_mse": 3.790279739004459,
+      "stable_share_percent": 98.20990817173401,
+      "identity_roundoff": 4.440892098500626e-16,
+      "calibration_bootstrap_mse_mean": 0.06655481816216767,
+      "calibration_bootstrap_mse_q025": 0.006181359171219191,
+      "calibration_bootstrap_mse_q975": 0.23061079315176602,
+      "mean_probability_mass_defect": 4.706140805636002e-08,
+      "maximum_probability_mass_defect": 1.9173327547861163e-07,
+      "maximum_parser_crosscheck_difference": 0.0,
+      "bootstrap_replicates": 2000,
+      "semantic_map_error": null,
+      "open_world_reference_error": null
+    },
+    {
+      "model": "GPT-4o-mini-2024-07-18",
+      "test_scenarios": 100,
+      "repeats": 500,
+      "total_aitchison_mse": 3.27559842007868,
+      "service_aitchison_mse": 0.02359304847799879,
+      "service_share_percent": 0.7202668169998716,
+      "stable_recovery_aitchison_mse": 3.252005371600681,
+      "stable_share_percent": 99.27973318300013,
+      "identity_roundoff": 0.0,
+      "calibration_bootstrap_mse_mean": 0.04679518804463375,
+      "calibration_bootstrap_mse_q025": 0.005792231533282042,
+      "calibration_bootstrap_mse_q975": 0.1432920232140031,
+      "mean_probability_mass_defect": 4.751840974742256e-08,
+      "maximum_probability_mass_defect": 1.856039895109518e-07,
+      "maximum_parser_crosscheck_difference": 0.0,
+      "bootstrap_replicates": 2000,
+      "semantic_map_error": null,
+      "open_world_reference_error": null
+    }
+  ]
+}

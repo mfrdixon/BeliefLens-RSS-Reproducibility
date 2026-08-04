@@ -1,0 +1,77 @@
+{
+  "confirmatory": true,
+  "presentation": "codes-definitions",
+  "model": "gpt-4o-mini-2024-07-18",
+  "scenarios": 520,
+  "repeats": 5,
+  "partition_counts": {
+    "train": 240,
+    "validation": 80,
+    "conformal": 100,
+    "test": 100
+  },
+  "test_mean_js_interval": {
+    "estimate": 0.0365935580185509,
+    "lower": 0.0285570109085558,
+    "upper": 0.04543380339104594,
+    "clusters": 100
+  },
+  "pooled_conformal_90": {
+    "level": 0.9,
+    "radius": 0.09221556687676544,
+    "calibration_count": 100,
+    "test_coverage": 0.9
+  },
+  "conditional_conformal_90": {
+    "entropy_bucket": {
+      "High": {
+        "level": 0.9,
+        "radius": 0.14072535491872268,
+        "calibration_count": 33,
+        "test_coverage": 0.9696969696969697,
+        "test_count": 33
+      },
+      "Low": {
+        "level": 0.9,
+        "radius": 0.0609174684757122,
+        "calibration_count": 34,
+        "test_coverage": 0.9090909090909091,
+        "test_count": 33
+      },
+      "Medium": {
+        "level": 0.9,
+        "radius": 0.09221556687676544,
+        "calibration_count": 33,
+        "test_coverage": 0.8823529411764706,
+        "test_count": 34
+      }
+    },
+    "hidden_state": {
+      "Bear": {
+        "level": 0.9,
+        "radius": 0.13938768212666133,
+        "calibration_count": 40,
+        "test_coverage": 0.9130434782608695,
+        "test_count": 46
+      },
+      "Bull": {
+        "level": 0.9,
+        "radius": 0.05071583700228062,
+        "calibration_count": 37,
+        "test_coverage": 0.8378378378378378,
+        "test_count": 37
+      },
+      "Crisis": {
+        "level": 0.9,
+        "radius": 0.0523481622020122,
+        "calibration_count": 23,
+        "test_coverage": 0.9411764705882353,
+        "test_count": 17
+      }
+    }
+  },
+  "all_crosschecks_passed": true,
+  "fallback_calls": 0,
+  "calibration_condition_number": 20.097477886684395,
+  "elicitation_decomposition_available": false
+}

@@ -1,0 +1,22 @@
+{
+  "frozen_before_live_run": true,
+  "model": "gpt-4o-mini-2024-07-18",
+  "partition": "validation only",
+  "scenarios": 24,
+  "entropy_strata": {
+    "Low": 8,
+    "Medium": 8,
+    "High": 8
+  },
+  "repeats": 2,
+  "conditions": [
+    "equiv-evidence-first",
+    "equiv-prose",
+    "ablate-definitions",
+    "ablate-prior",
+    "ablate-evidence"
+  ],
+  "equivalence_margin_js": 0.05,
+  "ablation_role": "exploratory mechanism isolation; no prompt selected",
+  "calls": 240
+}

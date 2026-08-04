@@ -1,0 +1,30 @@
+{
+  "confirmatory": true,
+  "model": "gpt-4.1-mini",
+  "presentation": "codes-definitions",
+  "state_definitions": [
+    "A favorable market regime characterized by strong or improving earnings and activity, easy funding, tight credit conditions, and generally low volatility.",
+    "A weakening or mixed market regime characterized by softer earnings and activity, normal-to-tighter funding, stable-to-wider credit conditions, and elevated volatility.",
+    "A severe stress regime characterized by weak earnings, contraction, stressed funding, wide credit conditions, and extreme volatility."
+  ],
+  "seeds": [
+    20260810,
+    20260811,
+    20260812,
+    20260813
+  ],
+  "scenarios": 520,
+  "repeats": 5,
+  "live_calls": 2600,
+  "partition_counts": {
+    "train": 240,
+    "validation": 80,
+    "conformal": 100,
+    "test": 100
+  },
+  "entropy_counts": {
+    "Low": 174,
+    "Medium": 174,
+    "High": 172
+  }
+}

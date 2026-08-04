@@ -1,0 +1,17 @@
+{
+  "model": "gpt-4.1-mini-2025-04-14",
+  "partition": "validation only",
+  "scenarios": 12,
+  "entropy_strata": {
+    "Low": 4,
+    "Medium": 4,
+    "High": 4
+  },
+  "conditions": [
+    "irrelevant-distractor",
+    "contradict-replace-one"
+  ],
+  "repeats": 2,
+  "calls": 48,
+  "contradiction_rule": "replace the single observed variable whose alternative outcome maximizes exact reference-posterior JS distance"
+}

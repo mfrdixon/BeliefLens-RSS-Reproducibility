@@ -1,0 +1,72 @@
+{
+  "partition": "validation only",
+  "equivalence_margin_js": 0.05,
+  "conditions": {
+    "ablate-definitions": {
+      "js_to_canonical": {
+        "estimate": 0.03271849410161116,
+        "ci_low": 0.020031579436616577,
+        "ci_high": 0.047501451042985844
+      },
+      "delta_reference_js": {
+        "estimate": 0.019581059396454183,
+        "ci_low": -0.01010390323619274,
+        "ci_high": 0.04991976256016696
+      },
+      "equivalence_pass_rate": null
+    },
+    "ablate-evidence": {
+      "js_to_canonical": {
+        "estimate": 0.22045520022915546,
+        "ci_low": 0.14766257357275644,
+        "ci_high": 0.29307749103711567
+      },
+      "delta_reference_js": {
+        "estimate": 0.17250826650978712,
+        "ci_low": 0.1050974707741513,
+        "ci_high": 0.24420072678752372
+      },
+      "equivalence_pass_rate": null
+    },
+    "ablate-prior": {
+      "js_to_canonical": {
+        "estimate": 0.01033326145239277,
+        "ci_low": 0.006009925041941821,
+        "ci_high": 0.014950915915833545
+      },
+      "delta_reference_js": {
+        "estimate": 0.004789988616895775,
+        "ci_low": -0.007270422049945151,
+        "ci_high": 0.017853297704123087
+      },
+      "equivalence_pass_rate": null
+    },
+    "equiv-evidence-first": {
+      "js_to_canonical": {
+        "estimate": 0.04902235499531487,
+        "ci_low": 0.02410189445216476,
+        "ci_high": 0.08008234868435436
+      },
+      "delta_reference_js": {
+        "estimate": 0.026053325025241478,
+        "ci_low": -0.0031371977542943236,
+        "ci_high": 0.05794863662535915
+      },
+      "equivalence_pass_rate": 0.7083333333333334
+    },
+    "equiv-prose": {
+      "js_to_canonical": {
+        "estimate": 0.009522065532109821,
+        "ci_low": 0.0038317150742959777,
+        "ci_high": 0.016894000337508444
+      },
+      "delta_reference_js": {
+        "estimate": -0.0021820446253301338,
+        "ci_low": -0.020582366860925894,
+        "ci_high": 0.015127961775963343
+      },
+      "equivalence_pass_rate": 0.9375
+    }
+  },
+  "interpretation": "Equivalence conditions preserve all information; ablations remove exactly one information component. No condition was selected from these results."
+}

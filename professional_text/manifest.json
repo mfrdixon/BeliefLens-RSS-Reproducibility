@@ -1,0 +1,48 @@
+{
+  "version": "3.0",
+  "source": "short-form deterministic market commentary from cited FRED series",
+  "records": 1721,
+  "projects": {
+    "pilot_150": 150,
+    "development_remaining": 707,
+    "validation": 336,
+    "locked_test": 528
+  },
+  "channel_counts": {
+    "implied_volatility": 522,
+    "rates_curve": 522,
+    "equity_momentum": 521,
+    "credit_spreads": 156
+  },
+  "date_range": [
+    "2016-07-15 21:00:00+00:00",
+    "2026-07-10 21:00:00+00:00"
+  ],
+  "suggested_labels": false,
+  "pilot_allocation": {
+    "equity_momentum | 2016": 4,
+    "equity_momentum | 2017": 9,
+    "equity_momentum | 2018": 9,
+    "equity_momentum | 2019": 9,
+    "equity_momentum | 2020": 9,
+    "equity_momentum | 2021": 10,
+    "implied_volatility | 2016": 5,
+    "implied_volatility | 2017": 9,
+    "implied_volatility | 2018": 9,
+    "implied_volatility | 2019": 9,
+    "implied_volatility | 2020": 9,
+    "implied_volatility | 2021": 9,
+    "rates_curve | 2016": 5,
+    "rates_curve | 2017": 9,
+    "rates_curve | 2018": 9,
+    "rates_curve | 2019": 9,
+    "rates_curve | 2020": 9,
+    "rates_curve | 2021": 9
+  },
+  "file_sha256": {
+    "pilot_150_tasks.json": "b288f310d6557d2ef2d178d6c0e0e24c8016746d9f363dbbae5ac5170ef2c35e",
+    "development_remaining_tasks.json": "703a1951c4b8ec87cd3f382f899c9a0833f63b1bdbb8b7cbae7b80df1fb28a5c",
+    "validation_tasks.json": "455180d549bb68541d22d19a43614f55def08956f392bfc4ccbda216f725e319",
+    "locked_test_tasks.json": "857240b552558fc3e64a8894ea06448367e988373027c46f00979aaa733dc9b1"
+  }
+}
