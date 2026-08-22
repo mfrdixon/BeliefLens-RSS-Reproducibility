@@ -74,42 +74,58 @@
       {
         "token": "C",
         "occurrences": 63,
-        "mean_entropy_contribution": 0.09394672680877497
+        "mean_entropy_contribution": 0.09394672680877497,
+        "semantic_state": "Risk-off",
+        "display_label": "C \u2014 Risk-off"
       },
       {
         "token": "B",
         "occurrences": 197,
-        "mean_entropy_contribution": 0.06230950715047258
+        "mean_entropy_contribution": 0.06230950715047258,
+        "semantic_state": "Mixed",
+        "display_label": "B \u2014 Mixed"
       },
       {
         "token": "A",
         "occurrences": 214,
-        "mean_entropy_contribution": 0.02642039092415751
+        "mean_entropy_contribution": 0.02642039092415751,
+        "semantic_state": "Risk-on",
+        "display_label": "A \u2014 Risk-on"
       },
       {
         "token": "{\"",
         "occurrences": 412,
-        "mean_entropy_contribution": 1.567477108167329e-05
+        "mean_entropy_contribution": 1.567477108167329e-05,
+        "semantic_state": null,
+        "display_label": "'{\"'"
       },
       {
         "token": "orientation",
         "occurrences": 412,
-        "mean_entropy_contribution": 1.3332502037760204e-05
+        "mean_entropy_contribution": 1.3332502037760204e-05,
+        "semantic_state": null,
+        "display_label": "'orientation'"
       },
       {
         "token": "\"}",
         "occurrences": 412,
-        "mean_entropy_contribution": 8.842134300779003e-06
+        "mean_entropy_contribution": 8.842134300779003e-06,
+        "semantic_state": null,
+        "display_label": "'\"}'"
       },
       {
         "token": "_code",
         "occurrences": 412,
-        "mean_entropy_contribution": 8.805086679047094e-06
+        "mean_entropy_contribution": 8.805086679047094e-06,
+        "semantic_state": null,
+        "display_label": "'_code'"
       },
       {
         "token": "\":\"",
         "occurrences": 412,
-        "mean_entropy_contribution": 8.175490084313466e-06
+        "mean_entropy_contribution": 8.175490084313466e-06,
+        "semantic_state": null,
+        "display_label": "'\":\"'"
       }
     ]
   },
@@ -2684,6 +2700,13 @@
   "frozen": true,
   "prompt_attribution_scope": "Whole-prompt information-equivalent variants; not individual prompt-token deletion.",
   "output_attribution_scope": "Returned candidate codes and top-k tokens from stored provider responses.",
+  "verbalizer_mapping": {
+    "A": "Risk-on",
+    "B": "Mixed",
+    "C": "Risk-off",
+    "D": "Unsure"
+  },
+  "verbalizer_rationale": "Single-token codes control tokenization and phrase-length effects. They are measurement instruments, not semantic states; reporting layers should display both code and state.",
   "provenance": {
     "study": "belieflens-current-state-spy-sgov-v4",
     "model": "gpt-5.2-2025-12-11",

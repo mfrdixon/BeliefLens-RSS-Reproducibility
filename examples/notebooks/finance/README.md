@@ -93,6 +93,19 @@ The public notebook calls the immutable, keyless [`GET /v1/examples/SPY-trading/
 
 The notebooks visualize three distinct diagnostics: instability under information-equivalent prompt presentation, local output-candidate sensitivity of held-out Brier error, and returned top-k token contributions to observed entropy. These are conditional sensitivity and probability-decomposition results—not claims that a token is the model's universal internal cause of error. Missing top-k probability mass remains explicitly disclosed.
 
+## OpenTelemetry and LangChain
+
+BeliefLens emits W3C trace context and OTLP spans. OTLP is the transport layer; storage and visualization remain external. The same instrumented service can send traces to Jaeger, Grafana Tempo, Datadog, LangSmith or an OpenTelemetry Collector by changing configuration rather than analysis code:
+
+```text
+BELIEFLENS_OTEL_ENABLED=true
+OTEL_SERVICE_NAME=belieflens-service
+OTEL_EXPORTER_OTLP_ENDPOINT=<backend OTLP HTTP endpoint>
+OTEL_EXPORTER_OTLP_HEADERS=<backend authentication headers, if required>
+```
+
+`GET /v1/health` reports whether telemetry is enabled and configured. Every instrumented response carries `X-BeliefLens-Trace-Id`, which can be searched in the selected backend. Raw evidence, prompts and generated text are not exported by default. The notebooks end with a trace preview and a LangChain metadata example; LangChain is an optional orchestrator, while OpenTelemetry is the vendor-neutral observability boundary.
+
 ## Citation requirements
 
 Use of these notebooks, their frozen measurements, experimental design, semantic map, figures or derived benchmark should cite:
