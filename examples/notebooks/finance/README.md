@@ -15,9 +15,14 @@ The statistical task is recovery of a declared broad-equity state from point-in-
 
 The frozen files in `data/offline_reproduction/` are included so the public notebook remains inspectable without credentials. They contain the minimal approved evidence records, row-level measurements, semantic-map description, market-price history and archived API result. They contain no credentials or private service state.
 
-## Supplied benchmark CSV
+## Supplied benchmark package
 
-[`data/offline_reproduction/inputs/SPY_SGOV_benchmark_example.csv`](data/offline_reproduction/inputs/SPY_SGOV_benchmark_example.csv) is a ready-to-use local benchmark containing 412 point-in-time broad-equity evidence records. It includes the three required fields—`source_id`, `evidence_text` and `reference_state`—plus decision date, target, horizon, frozen partition and point-in-time certification.
+The benchmark is a two-file package:
+
+- [`SPY_SGOV_benchmark_manifest.json`](data/offline_reproduction/inputs/SPY_SGOV_benchmark_manifest.json) is the authoritative, versioned specification. It defines the target estimand, state ontology, residual category, frozen partitions, field types, provenance, validation rules and CSV integrity hash.
+- [`SPY_SGOV_benchmark_example.csv`](data/offline_reproduction/inputs/SPY_SGOV_benchmark_example.csv) contains the 412 point-in-time evidence records. It may use only the state values declared by the manifest and cannot redefine the ontology.
+
+This linked-manifest design keeps the metadata machine-readable without duplicating a moderately sized tabular dataset inside JSON. A portable single-file export may embed the same records under a `records` field, but the ontology and validation rules must remain identical and authoritative.
 
 To use it in the authenticated notebook, set the path before starting Jupyter:
 
@@ -25,19 +30,19 @@ To use it in the authenticated notebook, set the path before starting Jupyter:
 export BELIEFLENS_RECORDS_CSV="$(pwd)/examples/notebooks/finance/data/offline_reproduction/inputs/SPY_SGOV_benchmark_example.csv"
 ```
 
-As of August 21, 2026, no public dataset named BeliefLens or BeliefBench is published on Hugging Face. The platform supports pinned Hugging Face datasets, and Financial PhraseBank is used in its integration examples, but it is a third-party dataset rather than the SPY/SGOV benchmark supplied here. A future Hugging Face release should be cited and pinned by immutable revision rather than referenced only by its mutable `main` branch.
+As of August 21, 2026, no public dataset named BeliefLens or BeliefBench is published on Hugging Face. The platform supports pinned Hugging Face datasets, and Financial PhraseBank is used in its integration examples, but it is a third-party dataset rather than the SPY/SGOV benchmark supplied here. A future Hugging Face release should be cited and pinned by immutable revision rather than referenced only by its mutable `main` branch; its dataset card should reproduce this manifest.
 
 ## Build a benchmark in the curator interface
 
 Users who prefer a guided interface can open the [BeliefLens benchmark curator](https://demo.belieflens.org/curator). The curator supports application and state definition, record collection, automated or manual review, frozen partitioning and export. Approved BeliefLens access is required.
 
-After exporting the reviewed benchmark as CSV, point the authenticated notebook to it:
+The preferred curator export is a benchmark manifest plus its referenced CSV. After export, verify that the records conform to the manifest ontology, then point the authenticated notebook to the CSV:
 
 ```bash
 export BELIEFLENS_RECORDS_CSV="/absolute/path/to/exported_benchmark.csv"
 ```
 
-The exported file must retain `source_id`, `evidence_text` and `reference_state`; preserve its provenance, review status, state definitions and frozen partition information with the experiment archive.
+The exported package must retain `source_id`, `evidence_text` and `reference_state`. The manifest—not values inferred from the CSV—determines the allowed states and their meanings. Preserve its provenance, review status, ontology version and frozen partition information with the experiment archive.
 
 ## Run the public notebook
 

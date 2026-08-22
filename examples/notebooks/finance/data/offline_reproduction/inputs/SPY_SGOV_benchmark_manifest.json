@@ -1,0 +1,125 @@
+{
+  "schema_version": "belieflens-benchmark-manifest-v1",
+  "benchmark": {
+    "id": "spy-sgov-us-equity-state-v1",
+    "name": "SPY/SGOV US Broad-Equity State Benchmark",
+    "version": "1.0.0",
+    "status": "frozen_example",
+    "description": "Point-in-time evidence records for measuring the current US broad-equity market-stress state. The portfolio illustration is downstream of, and does not define, the measurement target.",
+    "domain": "finance",
+    "use_case": "semantic_state_measurement",
+    "created_at": "2026-08-21",
+    "record_count": 412
+  },
+  "estimand": {
+    "target_name": "current US broad-equity market-stress state",
+    "target_instrument": "US broad equities represented by SPY",
+    "evaluation_horizon": "current evidence snapshot",
+    "decision_layer_excluded": true,
+    "notes": "SPY/SGOV portfolio weights and performance are not part of the ontology or estimand."
+  },
+  "ontology": {
+    "id": "us-broad-equity-market-state-v1",
+    "version": "1.0.0",
+    "authority": "This manifest is authoritative. Record files may use only the state values declared here and may not redefine their meaning.",
+    "type": "finite_closed_world",
+    "ordered": false,
+    "reference_state_field": "reference_state",
+    "states": [
+      {
+        "id": "risk_on",
+        "value": "Risk-on",
+        "definition": "Evidence is collectively consistent with a constructive broad-equity environment, such as positive equity momentum and breadth, contained stress, or supportive credit conditions."
+      },
+      {
+        "id": "mixed",
+        "value": "Mixed",
+        "definition": "Evidence is conflicting, transitional, or insufficiently one-sided to support either the Risk-on or Risk-off state."
+      },
+      {
+        "id": "risk_off",
+        "value": "Risk-off",
+        "definition": "Evidence is collectively consistent with a defensive or stressed broad-equity environment, such as negative momentum or breadth, elevated volatility, or deteriorating credit conditions."
+      }
+    ],
+    "unknown_state_policy": "reject_record",
+    "measurement_residual": {
+      "value": "Unsure",
+      "is_reference_state": false,
+      "purpose": "Retains unexpressed or unresolved probability mass in the language-measurement channel; it is not a benchmark reference label."
+    }
+  },
+  "data": {
+    "storage": "external_csv",
+    "path": "SPY_SGOV_benchmark_example.csv",
+    "media_type": "text/csv",
+    "encoding": "UTF-8",
+    "sha256": "cf7cb9d3e6a46fcdce13ad8ae5564af82d365a835695ca5a197591959e3a5379",
+    "primary_key": "source_id",
+    "required_columns": [
+      "source_id",
+      "decision_date",
+      "target_name",
+      "evaluation_horizon",
+      "evidence_text",
+      "reference_state",
+      "partition",
+      "point_in_time_certified"
+    ],
+    "column_types": {
+      "source_id": "string",
+      "decision_date": "date:YYYY-MM-DD",
+      "target_name": "string",
+      "evaluation_horizon": "string",
+      "evidence_text": "string",
+      "reference_state": "ontology_state_value",
+      "partition": "partition_value",
+      "point_in_time_certified": "boolean"
+    },
+    "date_range": {
+      "start": "2018-01-10",
+      "end": "2026-07-07"
+    }
+  },
+  "partitions": {
+    "frozen": true,
+    "field": "partition",
+    "allowed_values": [
+      "calibration",
+      "prompt_validation",
+      "conformal",
+      "test"
+    ],
+    "counts": {
+      "calibration": 180,
+      "prompt_validation": 45,
+      "conformal": 60,
+      "test": 127
+    },
+    "test_access_policy": "Do not use the test partition to define the ontology, choose prompts, fit calibration, or tune decision rules."
+  },
+  "class_counts": {
+    "Risk-on": 133,
+    "Mixed": 117,
+    "Risk-off": 162
+  },
+  "provenance": {
+    "evidence_scope": "Point-in-time summaries of broad-equity momentum, volatility, cross-equity breadth, credit conditions, and rates conditions.",
+    "record_review_status": "frozen research example",
+    "point_in_time_requirement": true,
+    "source_archive": "BeliefLens-RSS-Reproducibility",
+    "curator_url": "https://demo.belieflens.org/curator"
+  },
+  "validation": {
+    "fail_closed": true,
+    "rules": [
+      "The CSV SHA-256 digest must match data.sha256.",
+      "Every source_id must be unique.",
+      "Every reference_state must equal one ontology.states[].value.",
+      "Every partition must be declared in partitions.allowed_values.",
+      "target_name and evaluation_horizon must agree with the estimand.",
+      "All records used in point-in-time evaluation must have point_in_time_certified=true.",
+      "Observed row, partition, and class counts must match this manifest."
+    ]
+  }
+}
