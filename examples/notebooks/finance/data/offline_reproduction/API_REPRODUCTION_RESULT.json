@@ -1,0 +1,132 @@
+{
+  "schema_version": "belieflens-offline-reproduction-result-v2",
+  "api_calls": 1,
+  "safe_mode": true,
+  "input_integrity_passed": true,
+  "frozen_semantic_map_max_abs_error": 2.220446049250313e-16,
+  "refitted_semantic_map_max_abs_error": 2.0317510451839382e-09,
+  "portfolio_metric_max_abs_error": 1.1102230246251565e-16,
+  "diagnostic_max_abs_error": 7.50269638083445e-12,
+  "diagnostic_checks": {
+    "identification_smallest_singular_value": 1.4210854715202004e-14,
+    "held_out_log_loss": 8.881784197001252e-16,
+    "conformal_radius": 0.0,
+    "prompt_stability_mean_js": 7.50269638083445e-12,
+    "entropy": 2.220446049250313e-16
+  },
+  "tolerance": 1e-08,
+  "reproduction_passed": true,
+  "measurement_diagnostics": {
+    "identification": {
+      "smallest_singular_value": 64.66105896684542,
+      "design_condition_number": 3.6509273025281126
+    },
+    "held_out_recovery": {
+      "accuracy": 0.3779527559055118,
+      "multiclass_brier": 0.48826365416322615,
+      "log_loss": 0.7680021531081858,
+      "mean_js_error": 0.22165870412041186,
+      "prevalence_baseline": {
+        "accuracy": 0.2992125984251969,
+        "multiclass_brier": 0.666666666666667,
+        "log_loss": 1.0986122886681093
+      }
+    },
+    "printed_probability_recovery": {
+      "accuracy": 0.33070866141732286,
+      "multiclass_brier": 0.7489796414574844,
+      "log_loss": 1.1970168166642559,
+      "mean_js_error": 0.31492585002320583
+    },
+    "conformal_coverage": {
+      "nominal": 0.9,
+      "radius_js": 0.30997418175226943,
+      "empirical": 0.889763779527559,
+      "covered": 113,
+      "total": 127,
+      "one_sided_exact_binomial_undercoverage_p_value": 0.3921302296244953
+    },
+    "prompt_stability": {
+      "mean_js": 0.015646539387928305,
+      "pairwise_against_selected": {
+        "vol-regime-evidence-first-v1": 0.01528070750755002,
+        "vol-regime-reordered-v1": 0.01601237126830659
+      }
+    },
+    "uncertainty": {
+      "mean_normalized_state_entropy": 0.7239375825702404,
+      "mean_observed_candidate_mass": 0.9990075448368014
+    },
+    "elicited_discrepancy": {
+      "mean_js_lexical_vs_elicited": 0.05130140718068112
+    }
+  },
+  "portfolio_metrics": {
+    "SPY": {
+      "observations": 127,
+      "annualized_return": 0.20144313875462294,
+      "annualized_volatility": 0.1406404049625098,
+      "excess_sharpe_vs_sgov": 1.116252523872109,
+      "maximum_drawdown": 0.08881363466930159,
+      "total_return": 0.09690216435362231
+    },
+    "SGOV": {
+      "observations": 127,
+      "annualized_return": 0.03672733861135269,
+      "annualized_volatility": 0.0017977539146184416,
+      "excess_sharpe_vs_sgov": null,
+      "maximum_drawdown": 0.0,
+      "total_return": 0.018343830109192494
+    },
+    "fixed_50_50": {
+      "observations": 127,
+      "annualized_return": 0.11881313960000606,
+      "annualized_volatility": 0.07018103342934644,
+      "excess_sharpe_vs_sgov": 1.1162525238721093,
+      "maximum_drawdown": 0.042316349036508494,
+      "total_return": 0.058210975140637
+    },
+    "blind_GPT_no_market_evidence": {
+      "observations": 127,
+      "annualized_return": 0.03672733861135269,
+      "annualized_volatility": 0.0017977539146184416,
+      "excess_sharpe_vs_sgov": null,
+      "maximum_drawdown": 0.0,
+      "total_return": 0.018343830109192494
+    },
+    "blind_GPT_direct_recommendation": {
+      "observations": 127,
+      "annualized_return": 0.1125043240116641,
+      "annualized_volatility": 0.08129955176130638,
+      "excess_sharpe_vs_sgov": 0.9052590864762108,
+      "maximum_drawdown": 0.052574396116870425,
+      "total_return": 0.055199534032437825
+    },
+    "direct_GPT_recommendation": {
+      "observations": 127,
+      "annualized_return": 0.13730322924396,
+      "annualized_volatility": 0.0952740541918353,
+      "excess_sharpe_vs_sgov": 1.0172734632172826,
+      "maximum_drawdown": 0.049426599633226154,
+      "total_return": 0.06698881632589493
+    },
+    "data_assisted_GPT_elicited": {
+      "observations": 127,
+      "annualized_return": 0.1055893455423298,
+      "annualized_volatility": 0.0884433080445424,
+      "excess_sharpe_vs_sgov": 0.7694612654893612,
+      "maximum_drawdown": 0.05182690164578707,
+      "total_return": 0.0518890007100592
+    },
+    "BeliefLens_calibrated_lexical": {
+      "observations": 127,
+      "annualized_return": 0.12781071162209678,
+      "annualized_volatility": 0.0715575992652336,
+      "excess_sharpe_vs_sgov": 1.2097146753182508,
+      "maximum_drawdown": 0.031373459906735124,
+      "total_return": 0.06249132814290337
+    }
+  },
+  "endpoint": "/v1/examples/SPY-trading",
+  "provider_api_calls": 0
+}
