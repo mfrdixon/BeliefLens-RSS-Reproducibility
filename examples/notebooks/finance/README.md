@@ -87,6 +87,12 @@ Recommended provenance includes the evidence observation time, retrieval time, t
 - Report transaction costs, turnover assumptions and any mapping from state probabilities to portfolio weights separately.
 - A new provider run is a replication, not an exact reproduction, because fitted services can change.
 
+## Uncertainty attribution
+
+The public notebook calls the immutable, keyless [`GET /v1/examples/SPY-trading/attributions`](https://demo.belieflens.org/v1/examples/SPY-trading/attributions) route and falls back to the archived [`attribution_result.json`](data/offline_reproduction/attribution_result.json). The authenticated notebook uses `POST /v1/attributions/analyze` on stored private-run measurements. Both routes perform retrospective analysis and make no model-provider calls.
+
+The notebooks visualize three distinct diagnostics: instability under information-equivalent prompt presentation, local output-candidate sensitivity of held-out Brier error, and returned top-k token contributions to observed entropy. These are conditional sensitivity and probability-decomposition results—not claims that a token is the model's universal internal cause of error. Missing top-k probability mass remains explicitly disclosed.
+
 ## Citation requirements
 
 Use of these notebooks, their frozen measurements, experimental design, semantic map, figures or derived benchmark should cite:

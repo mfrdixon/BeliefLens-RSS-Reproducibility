@@ -1,0 +1,2693 @@
+{
+  "schema_version": "belieflens-token-attribution-v1",
+  "interpretation": "Interventional sensitivity under declared perturbations and retrospective probability decomposition; not an internal causal explanation.",
+  "ontology": {
+    "states": [
+      "Risk-on",
+      "Mixed",
+      "Risk-off"
+    ],
+    "version": "us-broad-equity-market-state-v1"
+  },
+  "records_analyzed": 412,
+  "provider_api_calls": 0,
+  "methods": {
+    "prompt": "information-equivalent span perturbation",
+    "output": "candidate entropy contribution and optional local calibrator Jacobian sensitivity",
+    "top_k": "observed -p log(p) contribution with missing-mass disclosure"
+  },
+  "rankings": {
+    "prompt_spans": [
+      {
+        "role": "prompt presentation",
+        "text": "reordered state presentation",
+        "tokens": [
+          "reordered",
+          "state",
+          "presentation"
+        ],
+        "records": 172,
+        "mean_js_instability": 0.021907563045563905,
+        "mean_brier_attribution": -0.029929569306699867,
+        "mean_absolute_brier_attribution": 0.09753915207411205
+      },
+      {
+        "role": "prompt presentation",
+        "text": "evidence-first ordering",
+        "tokens": [
+          "evidence-first",
+          "ordering"
+        ],
+        "records": 172,
+        "mean_js_instability": 0.01641522940546254,
+        "mean_brier_attribution": -0.001146562296988253,
+        "mean_absolute_brier_attribution": 0.06361940520755945
+      }
+    ],
+    "output_candidates": [
+      {
+        "candidate": "Risk-off",
+        "records": 412,
+        "mean_entropy_contribution": 0.01424515172499878,
+        "mean_absolute_local_brier_sensitivity": 0.052472902754215435
+      },
+      {
+        "candidate": "Risk-on",
+        "records": 412,
+        "mean_entropy_contribution": 0.01321935903151483,
+        "mean_absolute_local_brier_sensitivity": 0.04311692765372394
+      },
+      {
+        "candidate": "Mixed",
+        "records": 412,
+        "mean_entropy_contribution": 0.029425657446221876,
+        "mean_absolute_local_brier_sensitivity": 0.03669727774583382
+      },
+      {
+        "candidate": "Unsure",
+        "records": 412,
+        "mean_entropy_contribution": 2.7657679209656868e-11,
+        "mean_absolute_local_brier_sensitivity": 0.018250906072586382
+      }
+    ],
+    "top_k_tokens": [
+      {
+        "token": "C",
+        "occurrences": 63,
+        "mean_entropy_contribution": 0.09394672680877497
+      },
+      {
+        "token": "B",
+        "occurrences": 197,
+        "mean_entropy_contribution": 0.06230950715047258
+      },
+      {
+        "token": "A",
+        "occurrences": 214,
+        "mean_entropy_contribution": 0.02642039092415751
+      },
+      {
+        "token": "{\"",
+        "occurrences": 412,
+        "mean_entropy_contribution": 1.567477108167329e-05
+      },
+      {
+        "token": "orientation",
+        "occurrences": 412,
+        "mean_entropy_contribution": 1.3332502037760204e-05
+      },
+      {
+        "token": "\"}",
+        "occurrences": 412,
+        "mean_entropy_contribution": 8.842134300779003e-06
+      },
+      {
+        "token": "_code",
+        "occurrences": 412,
+        "mean_entropy_contribution": 8.805086679047094e-06
+      },
+      {
+        "token": "\":\"",
+        "occurrences": 412,
+        "mean_entropy_contribution": 8.175490084313466e-06
+      }
+    ]
+  },
+  "records": [
+    {
+      "source_id": "daily-2021-06-07",
+      "reference_state": "Risk-off",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.22928610291072052,
+        "Mixed": 0.7696359154237918,
+        "Risk-off": 0.0010779816654876496
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.4975133309079736,
+        "brier": 1.6427567580116993,
+        "log_score": 6.832664814536397
+      },
+      "prompt_span_attributions": [
+        {
+          "unit_id": "vol-regime-evidence-first-v1",
+          "text": "evidence-first ordering",
+          "tokens": [
+            "evidence-first",
+            "ordering"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.09651507615313851,
+          "entropy_attribution": -0.18214879266857859,
+          "brier_attribution": 0.17247209746475578,
+          "log_score_attribution": 3.0931690226416215
+        },
+        {
+          "unit_id": "vol-regime-reordered-v1",
+          "text": "reordered state presentation",
+          "tokens": [
+            "reordered",
+            "state",
+            "presentation"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.09651516275251028,
+          "entropy_attribution": -0.18212682859151003,
+          "brier_attribution": 0.17244848994878859,
+          "log_score_attribution": 3.092877396114634
+        }
+      ],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Risk-on",
+          "probability": 0.060086650173887445,
+          "entropy_contribution": 0.16896171282086506,
+          "entropy_share": 0.743650274469859,
+          "local_brier_sensitivity": -0.0027941584363281647,
+          "local_entropy_sensitivity": 0.0023903257281196575
+        },
+        {
+          "candidate": "Mixed",
+          "probability": 0.9399133498241126,
+          "entropy_contribution": 0.058244164162400074,
+          "entropy_share": 0.2563497252869206,
+          "local_brier_sensitivity": 0.012718782543425145,
+          "local_entropy_sensitivity": -0.014681400530541379
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 9.999830947314469e-13,
+          "entropy_contribution": 2.7630554006096185e-11,
+          "entropy_share": 1.2161020817877436e-10,
+          "local_brier_sensitivity": -0.009214590864298627,
+          "local_entropy_sensitivity": 0.011152714846000963
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 9.999830947314469e-13,
+          "entropy_contribution": 2.7630554006096185e-11,
+          "entropy_share": 1.2161020817877436e-10,
+          "local_brier_sensitivity": -0.0007100332427983535,
+          "local_entropy_sensitivity": 0.0011383599564207584
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.06008766597201742,
+          "entropy_contribution": 0.1689635534055673,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 1.000016905552346,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.9399292395803285,
+          "entropy_contribution": 0.05822925892175493,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 1.000016905552346,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 0.9999809266955697,
+          "entropy_contribution": 1.9073122533667463e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999809266955697,
+          "missing_mass": 1.907330443029487e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 0.9999847413273523,
+          "entropy_contribution": 1.525855623359569e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999847413273523,
+          "missing_mass": 1.5258672647733285e-05
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 0.9999923706345725,
+          "entropy_contribution": 7.629336323848139e-06,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999923706345725,
+          "missing_mass": 7.6293654275305656e-06
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2026-02-03",
+      "reference_state": "Risk-off",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.25289276333586924,
+        "Mixed": 0.7464325862547863,
+        "Risk-off": 0.0006746504093444882
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.5196504785636278,
+        "brier": 1.6197675099051467,
+        "log_score": 7.301315913336771
+      },
+      "prompt_span_attributions": [
+        {
+          "unit_id": "vol-regime-evidence-first-v1",
+          "text": "evidence-first ordering",
+          "tokens": [
+            "evidence-first",
+            "ordering"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 1.6548212181353855e-14,
+          "entropy_attribution": 1.6434243210738941e-07,
+          "brier_attribution": -1.512338176912209e-07,
+          "log_score_attribution": -6.860237673933511e-06
+        },
+        {
+          "unit_id": "vol-regime-reordered-v1",
+          "text": "reordered state presentation",
+          "tokens": [
+            "reordered",
+            "state",
+            "presentation"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.08636809706365556,
+          "entropy_attribution": -0.16003643506370901,
+          "brier_attribution": 0.14950949654829238,
+          "log_score_attribution": 3.562149211267071
+        }
+      ],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Mixed",
+          "probability": 0.2689414213694572,
+          "entropy_contribution": 0.3531904648717407,
+          "entropy_share": 0.606644759269949,
+          "local_brier_sensitivity": 0.012223522447957763,
+          "local_entropy_sensitivity": -0.013728140879251092
+        },
+        {
+          "candidate": "Risk-on",
+          "probability": 0.7310585786285428,
+          "entropy_contribution": 0.22901264401731275,
+          "entropy_share": 0.39335524063513067,
+          "local_brier_sensitivity": -0.0030637864616098616,
+          "local_entropy_sensitivity": 0.0027929024085751155
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0000165108582674e-12,
+          "entropy_contribution": 2.7631460816807408e-11,
+          "entropy_share": 4.746017393639539e-11,
+          "local_brier_sensitivity": -0.008621818093114448,
+          "local_entropy_sensitivity": 0.010083726383157481
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0000165108582674e-12,
+          "entropy_contribution": 2.7631460816807408e-11,
+          "entropy_share": 4.746017393639539e-11,
+          "local_brier_sensitivity": -0.0005379178932334546,
+          "local_entropy_sensitivity": 0.0008515120875184967
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.26893698098908125,
+          "entropy_contribution": 0.3531890738340341,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 0.9999834894123366,
+          "missing_mass": 1.6510587663387533e-05
+        },
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.7310465084232554,
+          "entropy_contribution": 0.22902093299007956,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 0.9999834894123366,
+          "missing_mass": 1.6510587663387533e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 0.9999465956643435,
+          "entropy_contribution": 5.340290961956253e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999465956643435,
+          "missing_mass": 5.340433565648173e-05
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999847413273523,
+          "entropy_contribution": 1.525855623359569e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999847413273523,
+          "missing_mass": 1.5258672647733285e-05
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2024-04-02",
+      "reference_state": "Risk-off",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.2723104495931049,
+        "Mixed": 0.726898124590233,
+        "Risk-off": 0.0007914258166622471
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.5386202900849981,
+        "brier": 1.6009516392118954,
+        "log_score": 7.141674408035989
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Mixed",
+          "probability": 0.060086650173887465,
+          "entropy_contribution": 0.16896171282086514,
+          "entropy_share": 0.7436502744698634,
+          "local_brier_sensitivity": 0.01186832710442076,
+          "local_entropy_sensitivity": -0.013184775707414212
+        },
+        {
+          "candidate": "Risk-on",
+          "probability": 0.9399133498241127,
+          "entropy_contribution": 0.05824416416239997,
+          "entropy_share": 0.2563497252869216,
+          "local_brier_sensitivity": -0.0028467698541098127,
+          "local_entropy_sensitivity": 0.0024267599377901174
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 9.999602071967125e-13,
+          "entropy_contribution": 2.762992160014065e-11,
+          "entropy_share": 1.216074247738571e-10,
+          "local_brier_sensitivity": -0.008450410478296934,
+          "local_entropy_sensitivity": 0.009842631314655794
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 9.999602071967125e-13,
+          "entropy_contribution": 2.762992160014065e-11,
+          "entropy_share": 1.216074247738571e-10,
+          "local_brier_sensitivity": -0.0005711467720140116,
+          "local_entropy_sensitivity": 0.0009153844549682998
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.06008904128528707,
+          "entropy_contribution": 0.16896604538964713,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 1.0000397943848178,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.9399507530995308,
+          "entropy_contribution": 0.058209077933570066,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 1.0000397943848178,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999580392104567,
+          "entropy_contribution": 4.19599091770839e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999580392104567,
+          "missing_mass": 4.196078954332716e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2018-08-15",
+      "reference_state": "Risk-off",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.6308325607152411,
+        "Mixed": 0.34540111546838914,
+        "Risk-off": 0.023766323816369873
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.6796628862809367,
+        "brier": 1.4702838407403607,
+        "log_score": 3.7394856660127345
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Mixed",
+          "probability": 1.0012252678473164e-12,
+          "entropy_contribution": 2.7663650499508844e-11,
+          "entropy_share": 0.3216907450905989,
+          "local_brier_sensitivity": 0.0007126119284171055,
+          "local_entropy_sensitivity": -0.0004216061120388369
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0012252678473164e-12,
+          "entropy_contribution": 2.7663650499508844e-11,
+          "entropy_share": 0.3216907450905989,
+          "local_brier_sensitivity": -0.013899693996901993,
+          "local_entropy_sensitivity": 0.01394282714613845
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0012252678473164e-12,
+          "entropy_contribution": 2.7663650499508844e-11,
+          "entropy_share": 0.3216907450905989,
+          "local_brier_sensitivity": -0.008303744624140316,
+          "local_entropy_sensitivity": 0.008444315606125005
+        },
+        {
+          "candidate": "Risk-on",
+          "probability": 0.9999999999969964,
+          "entropy_contribution": 3.0035973708163878e-12,
+          "entropy_share": 0.03492776472820327,
+          "local_brier_sensitivity": 0.0214908266926252,
+          "local_entropy_sensitivity": -0.021965536640224617
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.9987762315937606,
+          "entropy_contribution": 0.0012230192960418418,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9987762315937606,
+          "missing_mass": 0.0012237684062393894
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 0.9999694828875315,
+          "entropy_contribution": 3.051664681667314e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999694828875315,
+          "missing_mass": 3.051711246848665e-05
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999732974756593,
+          "entropy_contribution": 2.6702167825095166e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999732974756593,
+          "missing_mass": 2.6702524340671552e-05
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 0.9999923706345725,
+          "entropy_contribution": 7.629336323848139e-06,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999923706345725,
+          "missing_mass": 7.6293654275305656e-06
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2023-11-02",
+      "reference_state": "Risk-off",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.6308156328634799,
+        "Mixed": 0.34540538158375644,
+        "Risk-off": 0.023778985552763657
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.6797030104755457,
+        "brier": 1.4702407093403642,
+        "log_score": 3.7389530483113833
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Mixed",
+          "probability": 1.0032362740448343e-12,
+          "entropy_contribution": 2.7717201167258662e-11,
+          "entropy_share": 0.321689240631621,
+          "local_brier_sensitivity": 0.0007177173374823638,
+          "local_entropy_sensitivity": -0.0004252759481011795
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0032362740448343e-12,
+          "entropy_contribution": 2.7717201167258662e-11,
+          "entropy_share": 0.321689240631621,
+          "local_brier_sensitivity": -0.01390987628010481,
+          "local_entropy_sensitivity": 0.013949933486885042
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0032362740448343e-12,
+          "entropy_contribution": 2.7717201167258662e-11,
+          "entropy_share": 0.321689240631621,
+          "local_brier_sensitivity": -0.008308033042513678,
+          "local_entropy_sensitivity": 0.008447266766703971
+        },
+        {
+          "candidate": "Risk-on",
+          "probability": 0.9999999999969902,
+          "entropy_contribution": 3.0098146197542697e-12,
+          "entropy_share": 0.03493227810513681,
+          "local_brier_sensitivity": 0.021500191985136124,
+          "local_entropy_sensitivity": -0.021971924305487833
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.9967741656361804,
+          "entropy_contribution": 0.0032206257564309595,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9967741656361804,
+          "missing_mass": 0.003225834363819624
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2020-11-11",
+      "reference_state": "Risk-off",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.6307237451299955,
+        "Mixed": 0.34542847803947146,
+        "Risk-off": 0.023847776830533053
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.6799208456094166,
+        "brier": 1.470006438910166,
+        "log_score": 3.7360642806452447
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Mixed",
+          "probability": 1.0142144580321553e-12,
+          "entropy_contribution": 2.8009466097826293e-11,
+          "entropy_share": 0.3216854925300841,
+          "local_brier_sensitivity": 0.0007454472483090467,
+          "local_entropy_sensitivity": -0.0004451934203216903
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0142144580321553e-12,
+          "entropy_contribution": 2.8009466097826293e-11,
+          "entropy_share": 0.3216854925300841,
+          "local_brier_sensitivity": -0.0139651846835814,
+          "local_entropy_sensitivity": 0.013988502786755046
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0142144580321553e-12,
+          "entropy_contribution": 2.8009466097826293e-11,
+          "entropy_share": 0.3216854925300841,
+          "local_brier_sensitivity": -0.008331327690906202,
+          "local_entropy_sensitivity": 0.008463284186089746
+        },
+        {
+          "candidate": "Risk-on",
+          "probability": 0.9999999999969574,
+          "entropy_contribution": 3.042566198980613e-12,
+          "entropy_share": 0.034943522409747796,
+          "local_brier_sensitivity": 0.02155106512617856,
+          "local_entropy_sensitivity": -0.022006593552523105
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.985984760991499,
+          "entropy_contribution": 0.01391656347529816,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.985984760991499,
+          "missing_mass": 0.01401523900850099
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 0.9999465956643435,
+          "entropy_contribution": 5.340290961956253e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999465956643435,
+          "missing_mass": 5.340433565648173e-05
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999580392104567,
+          "entropy_contribution": 4.19599091770839e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999580392104567,
+          "missing_mass": 4.196078954332716e-05
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999809266955697,
+          "entropy_contribution": 1.9073122533667463e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999809266955697,
+          "missing_mass": 1.907330443029487e-05
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2019-07-02",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.08928351195411083,
+        "Mixed": 0.4885337115013817,
+        "Risk-off": 0.4221827765445076
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.8462661476613427,
+        "brier": 1.2463080056827829,
+        "log_score": 2.415938444719221
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Risk-on",
+          "probability": 9.999732974726596e-13,
+          "entropy_contribution": 2.7630283297831757e-11,
+          "entropy_share": 0.32169089817090935,
+          "local_brier_sensitivity": -0.023303835816420187,
+          "local_entropy_sensitivity": 0.00996959542792433
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 9.999732974726596e-13,
+          "entropy_contribution": 2.7630283297831757e-11,
+          "entropy_share": 0.32169089817090935,
+          "local_brier_sensitivity": 0.012744051190409892,
+          "local_entropy_sensitivity": -0.0029877665859818665
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 9.999732974726596e-13,
+          "entropy_contribution": 2.7630283297831757e-11,
+          "entropy_share": 0.32169089817090935,
+          "local_brier_sensitivity": 0.008626216906493999,
+          "local_entropy_sensitivity": -0.00329024268867471
+        },
+        {
+          "candidate": "Mixed",
+          "probability": 0.9999999999970001,
+          "entropy_contribution": 2.9999336348351357e-12,
+          "entropy_share": 0.034927305487271874,
+          "local_brier_sensitivity": 0.0019335677195162992,
+          "local_entropy_sensitivity": -0.0036915861532677537
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 0.9999847413273523,
+          "entropy_contribution": 1.525855623359569e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999847413273523,
+          "missing_mass": 1.5258672647733285e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2019-07-03",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.08928346000252589,
+        "Mixed": 0.48853200088009674,
+        "Risk-off": 0.4221845391173774
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.84626630147342,
+        "brier": 1.2463079171786342,
+        "log_score": 2.415939026591494
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Risk-on",
+          "probability": 1.000045777411941e-12,
+          "entropy_contribution": 2.7632240214104816e-11,
+          "entropy_share": 0.3216912781031242,
+          "local_brier_sensitivity": -0.023304328762195913,
+          "local_entropy_sensitivity": 0.00997010095343296
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.000045777411941e-12,
+          "entropy_contribution": 2.7632240214104816e-11,
+          "entropy_share": 0.3216912781031242,
+          "local_brier_sensitivity": 0.012744639782537608,
+          "local_entropy_sensitivity": -0.0029883630556234633
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.000045777411941e-12,
+          "entropy_contribution": 2.7632240214104816e-11,
+          "entropy_share": 0.3216912781031242,
+          "local_brier_sensitivity": 0.008626451177045044,
+          "local_entropy_sensitivity": -0.0032904817778427464
+        },
+        {
+          "candidate": "Mixed",
+          "probability": 0.999999999997,
+          "entropy_contribution": 3.0000446571375978e-12,
+          "entropy_share": 0.03492616569062742,
+          "local_brier_sensitivity": 0.001933237802613248,
+          "local_entropy_sensitivity": -0.0036912561199667474
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 0.9999465956643435,
+          "entropy_contribution": 5.340290961956253e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999465956643435,
+          "missing_mass": 5.340433565648173e-05
+        },
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.9999542246805344,
+          "entropy_contribution": 4.57742717596682e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999542246805344,
+          "missing_mass": 4.577531946559077e-05
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 0.9999694828875315,
+          "entropy_contribution": 3.051664681667314e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999694828875315,
+          "missing_mass": 3.051711246848665e-05
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 0.9999732974756593,
+          "entropy_contribution": 2.6702167825095166e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999732974756593,
+          "missing_mass": 2.6702524340671552e-05
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999847413273523,
+          "entropy_contribution": 1.525855623359569e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999847413273523,
+          "missing_mass": 1.5258672647733285e-05
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999923706345725,
+          "entropy_contribution": 7.629336323848139e-06,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999923706345725,
+          "missing_mass": 7.6293654275305656e-06
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2019-01-24",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.08928180993429659,
+        "Mixed": 0.48847768836707633,
+        "Risk-off": 0.4222405016986271
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.8462711778575082,
+        "brier": 1.2463051150237017,
+        "log_score": 2.415957507993056
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Risk-on",
+          "probability": 1.0015003003485434e-12,
+          "entropy_contribution": 2.7670974521302693e-11,
+          "entropy_share": 0.32169039740438243,
+          "local_brier_sensitivity": -0.02331998024621008,
+          "local_entropy_sensitivity": 0.009986151855545569
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0015003003485434e-12,
+          "entropy_contribution": 2.7670974521302693e-11,
+          "entropy_share": 0.32169039740438243,
+          "local_brier_sensitivity": 0.012763328124212082,
+          "local_entropy_sensitivity": -0.003007301489243896
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0015003003485434e-12,
+          "entropy_contribution": 2.7670974521302693e-11,
+          "entropy_share": 0.32169039740438243,
+          "local_brier_sensitivity": 0.008633889483186363,
+          "local_entropy_sensitivity": -0.0032980730752266508
+        },
+        {
+          "candidate": "Mixed",
+          "probability": 0.9999999999969955,
+          "entropy_contribution": 3.004485549236085e-12,
+          "entropy_share": 0.03492880778685271,
+          "local_brier_sensitivity": 0.0019227626388116335,
+          "local_entropy_sensitivity": -0.003680777291075024
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.9985019471776237,
+          "entropy_contribution": 0.0014969301805146016,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9985019471776237,
+          "missing_mass": 0.0014980528223762501
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 0.9999694828875315,
+          "entropy_contribution": 3.051664681667314e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999694828875315,
+          "missing_mass": 3.051711246848665e-05
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 0.9999847413273523,
+          "entropy_contribution": 1.525855623359569e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999847413273523,
+          "missing_mass": 1.5258672647733285e-05
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999923706345725,
+          "entropy_contribution": 7.629336323848139e-06,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999923706345725,
+          "missing_mass": 7.6293654275305656e-06
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2022-03-29",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.08927893575768683,
+        "Mixed": 0.48838317473299897,
+        "Risk-off": 0.42233788950931417
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.8462796304813053,
+        "brier": 1.2463002751321162,
+        "log_score": 2.4159897006969886
+      },
+      "prompt_span_attributions": [
+        {
+          "unit_id": "vol-regime-evidence-first-v1",
+          "text": "evidence-first ordering",
+          "tokens": [
+            "evidence-first",
+            "ordering"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 1.1474820141915444e-08,
+          "entropy_attribution": 1.2688272209238072e-05,
+          "brier_attribution": -7.2734417675413e-06,
+          "log_score_attribution": 4.8249493524554765e-05
+        },
+        {
+          "unit_id": "vol-regime-reordered-v1",
+          "text": "reordered state presentation",
+          "tokens": [
+            "reordered",
+            "state",
+            "presentation"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 4.281403222385049e-10,
+          "entropy_attribution": 2.4435002055067656e-06,
+          "brier_attribution": -1.3968548793208413e-06,
+          "log_score_attribution": 9.326975068280063e-06
+        }
+      ],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Risk-on",
+          "probability": 1.0040364448975637e-12,
+          "entropy_contribution": 2.7738507629723964e-11,
+          "entropy_share": 0.3216895884284222,
+          "local_brier_sensitivity": -0.023347218391473676,
+          "local_entropy_sensitivity": 0.010014085105190803
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0040364448975637e-12,
+          "entropy_contribution": 2.7738507629723964e-11,
+          "entropy_share": 0.3216895884284222,
+          "local_brier_sensitivity": 0.012795851276022922,
+          "local_entropy_sensitivity": -0.0030402597526786486
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0040364448975637e-12,
+          "entropy_contribution": 2.7738507629723964e-11,
+          "entropy_share": 0.3216895884284222,
+          "local_brier_sensitivity": 0.00864683430264604,
+          "local_entropy_sensitivity": -0.0033112841244846937
+        },
+        {
+          "candidate": "Mixed",
+          "probability": 0.999999999996988,
+          "entropy_contribution": 3.0120350658035135e-12,
+          "entropy_share": 0.03493123471473329,
+          "local_brier_sensitivity": 0.0019045328128047025,
+          "local_entropy_sensitivity": -0.003662541228027463
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.9959797824858961,
+          "entropy_contribution": 0.004012125588627287,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9959797824858961,
+          "missing_mass": 0.004020217514103863
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 0.9999809266955697,
+          "entropy_contribution": 1.9073122533667463e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999809266955697,
+          "missing_mass": 1.907330443029487e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 0.9999847413273523,
+          "entropy_contribution": 1.525855623359569e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999847413273523,
+          "missing_mass": 1.5258672647733285e-05
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2020-01-17",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.08926739043902522,
+        "Mixed": 0.48800467601774883,
+        "Risk-off": 0.422727933543226
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.8463130584963809,
+        "brier": 1.2462813557306571,
+        "log_score": 2.416119026445926
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Risk-on",
+          "probability": 1.0142570170573908e-12,
+          "entropy_contribution": 2.8010598886538833e-11,
+          "entropy_share": 0.32168553696748964,
+          "local_brier_sensitivity": -0.02345632078187364,
+          "local_entropy_sensitivity": 0.010125971771841684
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0142570170573908e-12,
+          "entropy_contribution": 2.8010598886538833e-11,
+          "entropy_share": 0.32168553696748964,
+          "local_brier_sensitivity": 0.012926122620151699,
+          "local_entropy_sensitivity": -0.0031722724272827633
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0142570170573908e-12,
+          "entropy_contribution": 2.8010598886538833e-11,
+          "entropy_share": 0.32168553696748964,
+          "local_brier_sensitivity": 0.008698684754058892,
+          "local_entropy_sensitivity": -0.0033642007243406867
+        },
+        {
+          "candidate": "Mixed",
+          "probability": 0.9999999999969573,
+          "entropy_contribution": 3.0426772212830754e-12,
+          "entropy_share": 0.034943389097531016,
+          "local_brier_sensitivity": 0.0018315134076630464,
+          "local_entropy_sensitivity": -0.0035894986202182283
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.9859433882924502,
+          "entropy_contribution": 0.01395735135632811,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9859433882924502,
+          "missing_mass": 0.014056611707549793
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999580392104567,
+          "entropy_contribution": 4.19599091770839e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999580392104567,
+          "missing_mass": 4.196078954332716e-05
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999923706345725,
+          "entropy_contribution": 7.629336323848139e-06,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999923706345725,
+          "missing_mass": 7.6293654275305656e-06
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2021-11-08",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.0892673381274472,
+        "Mixed": 0.48800296522953346,
+        "Risk-off": 0.42272969664301935
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.8463132080547384,
+        "brier": 1.2462812718981822,
+        "log_score": 2.4161196124560367
+      },
+      "prompt_span_attributions": [
+        {
+          "unit_id": "vol-regime-evidence-first-v1",
+          "text": "evidence-first ordering",
+          "tokens": [
+            "evidence-first",
+            "ordering"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.1763420465154475,
+          "entropy_attribution": 0.34321215039813324,
+          "brier_attribution": 0.08034179986756373,
+          "log_score_attribution": 0.9725474282613511
+        },
+        {
+          "unit_id": "vol-regime-reordered-v1",
+          "text": "reordered state presentation",
+          "tokens": [
+            "reordered",
+            "state",
+            "presentation"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.22909276445132798,
+          "entropy_attribution": 0.16664391489051122,
+          "brier_attribution": 0.9901273423666228,
+          "log_score_attribution": 1.9554005204871898
+        }
+      ],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Risk-on",
+          "probability": 1.0143034471217174e-12,
+          "entropy_contribution": 2.8011834708219773e-11,
+          "entropy_share": 0.32168480246932407,
+          "local_brier_sensitivity": -0.0234568139960392,
+          "local_entropy_sensitivity": 0.010126477572984814
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0143034471217174e-12,
+          "entropy_contribution": 2.8011834708219773e-11,
+          "entropy_share": 0.32168480246932407,
+          "local_brier_sensitivity": 0.01292671153133278,
+          "local_entropy_sensitivity": -0.003172869205047224
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0143034471217174e-12,
+          "entropy_contribution": 2.8011834708219773e-11,
+          "entropy_share": 0.32168480246932407,
+          "local_brier_sensitivity": 0.008698919151931847,
+          "local_entropy_sensitivity": -0.0033644399410942072
+        },
+        {
+          "candidate": "Mixed",
+          "probability": 0.999999999996957,
+          "entropy_contribution": 3.0430102881904617e-12,
+          "entropy_share": 0.034945592592027716,
+          "local_brier_sensitivity": 0.0018311833127745828,
+          "local_entropy_sensitivity": -0.0035891684268433855
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.9858982564188761,
+          "entropy_contribution": 0.014001843294706285,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9858982564188761,
+          "missing_mass": 0.014101743581123927
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 0.9999732974756593,
+          "entropy_contribution": 2.6702167825095166e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999732974756593,
+          "missing_mass": 2.6702524340671552e-05
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2020-07-30",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.23029659083203036,
+        "Mixed": 0.7686870156814346,
+        "Risk-off": 0.0010163934865351143
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.498254592938284,
+        "brier": 1.1833240992177445,
+        "log_score": 1.4683872754260279
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Risk-on",
+          "probability": 0.07585818002109185,
+          "entropy_contribution": 0.19562988171866164,
+          "entropy_share": 0.7285074473724171,
+          "local_brier_sensitivity": -0.010426459204847341,
+          "local_entropy_sensitivity": 0.0024702568636832452
+        },
+        {
+          "candidate": "Mixed",
+          "probability": 0.9241418199769081,
+          "entropy_contribution": 0.07290530262845982,
+          "entropy_share": 0.2714925524217926,
+          "local_brier_sensitivity": 0.03490343549057527,
+          "local_entropy_sensitivity": -0.014609506795189313
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 9.99998205160186e-13,
+          "entropy_contribution": 2.763097152267175e-11,
+          "entropy_share": 1.0289516282256869e-10,
+          "local_brier_sensitivity": -0.02358158059025072,
+          "local_entropy_sensitivity": 0.011041446950612611
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 9.99998205160186e-13,
+          "entropy_contribution": 2.763097152267175e-11,
+          "entropy_share": 1.0289516282256869e-10,
+          "local_brier_sensitivity": -0.0008953956954772097,
+          "local_entropy_sensitivity": 0.0010978029808934567
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.07585831617461793,
+          "entropy_contribution": 0.19563009668994408,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 1.0000017948410354,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.9241434786664174,
+          "entropy_contribution": 0.07290377479103664,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 1.0000017948410354,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999618537549303,
+          "entropy_contribution": 3.814551749244546e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999618537549303,
+          "missing_mass": 3.814624506970343e-05
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 0.9999732974756593,
+          "entropy_contribution": 2.6702167825095166e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999732974756593,
+          "missing_mass": 2.6702524340671552e-05
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 0.9999732974756593,
+          "entropy_contribution": 2.6702167825095166e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999732974756593,
+          "missing_mass": 2.6702524340671552e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2021-04-16",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.23029659083203036,
+        "Mixed": 0.7686870156814346,
+        "Risk-off": 0.0010163934865351143
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.498254592938284,
+        "brier": 1.1833240992177445,
+        "log_score": 1.4683872754260279
+      },
+      "prompt_span_attributions": [
+        {
+          "unit_id": "vol-regime-evidence-first-v1",
+          "text": "evidence-first ordering",
+          "tokens": [
+            "evidence-first",
+            "ordering"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.09612143290457704,
+          "entropy_attribution": -0.18138678669596475,
+          "brier_attribution": 0.9271813347692385,
+          "log_score_attribution": 1.0076868519027662
+        },
+        {
+          "unit_id": "vol-regime-reordered-v1",
+          "text": "reordered state presentation",
+          "tokens": [
+            "reordered",
+            "state",
+            "presentation"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.09612143889434574,
+          "entropy_attribution": -0.18138495649786435,
+          "brier_attribution": 0.9271820668620306,
+          "log_score_attribution": 1.0076880759405338
+        }
+      ],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Risk-on",
+          "probability": 0.07585818002109185,
+          "entropy_contribution": 0.19562988171866164,
+          "entropy_share": 0.7285074473724185,
+          "local_brier_sensitivity": -0.010426459204847341,
+          "local_entropy_sensitivity": 0.0024702568636832452
+        },
+        {
+          "candidate": "Mixed",
+          "probability": 0.9241418199769083,
+          "entropy_contribution": 0.07290530262845972,
+          "entropy_share": 0.27149255242179277,
+          "local_brier_sensitivity": 0.03490343549057527,
+          "local_entropy_sensitivity": -0.014609506795189313
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 9.999905758084523e-13,
+          "entropy_contribution": 2.763076071589289e-11,
+          "entropy_share": 1.0289437779777101e-10,
+          "local_brier_sensitivity": -0.02358158059025072,
+          "local_entropy_sensitivity": 0.011041446950612611
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 9.999905758084523e-13,
+          "entropy_contribution": 2.763076071589289e-11,
+          "entropy_share": 1.0289437779777101e-10,
+          "local_brier_sensitivity": -0.0008953956954772097,
+          "local_entropy_sensitivity": 0.0010978029808934567
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.07585889492984826,
+          "entropy_contribution": 0.19563101047738937,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 1.0000094242783641,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.9241505293485158,
+          "entropy_contribution": 0.07289728029582448,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 1.0000094242783641,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 0.9999389667063573,
+          "entropy_contribution": 6.1031431073349636e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999389667063573,
+          "missing_mass": 6.1033293642709374e-05
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999618537549303,
+          "entropy_contribution": 3.814551749244546e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999618537549303,
+          "missing_mass": 3.814624506970343e-05
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2019-02-12",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.2405441404441977,
+        "Mixed": 0.7587487441618966,
+        "Risk-off": 0.0007071153939056744
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.5073201913689968,
+        "brier": 1.152473359393078,
+        "log_score": 1.4248516701265097
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Risk-on",
+          "probability": 0.3775406687973903,
+          "entropy_contribution": 0.3677536760682576,
+          "entropy_share": 0.5548090272515634,
+          "local_brier_sensitivity": -0.010683852038412841,
+          "local_entropy_sensitivity": 0.0028473214984700993
+        },
+        {
+          "candidate": "Mixed",
+          "probability": 0.6224593312006096,
+          "entropy_contribution": 0.29509364251159614,
+          "entropy_share": 0.44519097266506075,
+          "local_brier_sensitivity": 0.035456032289627445,
+          "local_entropy_sensitivity": -0.014103548650535315
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0000631850503124e-12,
+          "entropy_contribution": 2.7632703796341496e-11,
+          "entropy_share": 4.1687886515465575e-11,
+          "local_brier_sensitivity": -0.023897851783050077,
+          "local_entropy_sensitivity": 0.010373048255458612
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0000631850503124e-12,
+          "entropy_contribution": 2.7632703796341496e-11,
+          "entropy_share": 4.1687886515465575e-11,
+          "local_brier_sensitivity": -0.0008743284681645303,
+          "local_entropy_sensitivity": 0.0008831788966066045
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.3775168153784168,
+          "entropy_contribution": 0.367754293667257,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 0.9999368189397859,
+          "missing_mass": 6.318106021407921e-05
+        },
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.6224200035613691,
+          "entropy_contribution": 0.29511432457982345,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 0.9999368189397859,
+          "missing_mass": 6.318106021407921e-05
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 0.9999847413273523,
+          "entropy_contribution": 1.525855623359569e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999847413273523,
+          "missing_mass": 1.5258672647733285e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2021-11-09",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.26351249163732693,
+        "Mixed": 0.7357612386283988,
+        "Risk-off": 0.0007262697342742261
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.5301705261818583,
+        "brier": 1.083758977709981,
+        "log_score": 1.333654505531106
+      },
+      "prompt_span_attributions": [
+        {
+          "unit_id": "vol-regime-evidence-first-v1",
+          "text": "evidence-first ordering",
+          "tokens": [
+            "evidence-first",
+            "ordering"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.0004519549842875955,
+          "entropy_attribution": 0.025795609733982428,
+          "brier_attribution": -0.07801659919578374,
+          "log_score_attribution": -0.10408876801643463
+        },
+        {
+          "unit_id": "vol-regime-reordered-v1",
+          "text": "reordered state presentation",
+          "tokens": [
+            "reordered",
+            "state",
+            "presentation"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.081752180499286,
+          "entropy_attribution": -0.14949030080691617,
+          "brier_attribution": 0.8276084344426375,
+          "log_score_attribution": 0.8729410756747276
+        }
+      ],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Mixed",
+          "probability": 0.11920292202187915,
+          "entropy_contribution": 0.2535360338467444,
+          "entropy_share": 0.6939845028788615,
+          "local_brier_sensitivity": 0.03651425105787883,
+          "local_entropy_sensitivity": -0.013434909991803032
+        },
+        {
+          "candidate": "Risk-on",
+          "probability": 0.880797077976121,
+          "entropy_contribution": 0.11179782124173249,
+          "entropy_share": 0.30601549696987895,
+          "local_brier_sensitivity": -0.011023846539435491,
+          "local_entropy_sensitivity": 0.002614439233463446
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 9.999678940114515e-13,
+          "entropy_contribution": 2.7630133994681014e-11,
+          "entropy_share": 7.562982079449002e-11,
+          "local_brier_sensitivity": -0.024598045375847807,
+          "local_entropy_sensitivity": 0.00994179175702376
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 9.999678940114515e-13,
+          "entropy_contribution": 2.7630133994681014e-11,
+          "entropy_share": 7.562982079449002e-11,
+          "local_brier_sensitivity": -0.0008923591425955346,
+          "local_entropy_sensitivity": 0.000878679001315825
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.11920674927240621,
+          "entropy_contribution": 0.25354034682112847,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 1.000032107017376,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.88082535774497,
+          "entropy_contribution": 0.11177313051371163,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 1.000032107017376,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999618537549303,
+          "entropy_contribution": 3.814551749244546e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999618537549303,
+          "missing_mass": 3.814624506970343e-05
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 0.9999923706345725,
+          "entropy_contribution": 7.629336323848139e-06,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999923706345725,
+          "missing_mass": 7.6293654275305656e-06
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999923706345725,
+          "entropy_contribution": 7.629336323848139e-06,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999923706345725,
+          "missing_mass": 7.6293654275305656e-06
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2020-10-23",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.2753554521437798,
+        "Mixed": 0.7238274040317244,
+        "Risk-off": 0.000817143824495786
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.5414796357861262,
+        "brier": 1.049036499289081,
+        "log_score": 1.2896924626932864
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Mixed",
+          "probability": 0.04742587317747193,
+          "entropy_contribution": 0.14458191710627616,
+          "entropy_share": 0.7575089144176047,
+          "local_brier_sensitivity": 0.03693614385294385,
+          "local_entropy_sensitivity": -0.013095459051494238
+        },
+        {
+          "candidate": "Risk-on",
+          "probability": 0.9525741268205281,
+          "entropy_contribution": 0.046283054001784465,
+          "entropy_share": 0.2424910852928593,
+          "local_brier_sensitivity": -0.011145121217404184,
+          "local_entropy_sensitivity": 0.002356000427808789
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0000042622028725e-12,
+          "entropy_contribution": 2.7631134622734166e-11,
+          "entropy_share": 1.447679710652105e-10,
+          "local_brier_sensitivity": -0.024886025449826273,
+          "local_entropy_sensitivity": 0.009809538306082884
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0000042622028725e-12,
+          "entropy_contribution": 2.7631134622734166e-11,
+          "entropy_share": 1.447679710652105e-10,
+          "local_brier_sensitivity": -0.0009049971857133923,
+          "local_entropy_sensitivity": 0.0009299203176025637
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.0474256710396406,
+          "entropy_contribution": 0.14458150300884084,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 0.9999957378132939,
+          "missing_mass": 4.2621867061276575e-06
+        },
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.9525700667736533,
+          "entropy_contribution": 0.046286916773082006,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 0.9999957378132939,
+          "missing_mass": 4.2621867061276575e-06
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 0.9999847413273523,
+          "entropy_contribution": 1.525855623359569e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999847413273523,
+          "missing_mass": 1.5258672647733285e-05
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 0.9999847413273523,
+          "entropy_contribution": 1.525855623359569e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999847413273523,
+          "missing_mass": 1.5258672647733285e-05
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2026-04-17",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.27535578531164756,
+        "Mixed": 0.7238270579447906,
+        "Risk-off": 0.0008171567435618364
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.5414800086913222,
+        "brier": 1.049035515439454,
+        "log_score": 1.2896912527384312
+      },
+      "prompt_span_attributions": [
+        {
+          "unit_id": "vol-regime-evidence-first-v1",
+          "text": "evidence-first ordering",
+          "tokens": [
+            "evidence-first",
+            "ordering"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.07676339214210748,
+          "entropy_attribution": -0.13820896461753018,
+          "brier_attribution": 0.7928737146859515,
+          "log_score_attribution": 0.8289589989365262
+        },
+        {
+          "unit_id": "vol-regime-reordered-v1",
+          "text": "reordered state presentation",
+          "tokens": [
+            "reordered",
+            "state",
+            "presentation"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.07676337702536837,
+          "entropy_attribution": -0.13820759149310413,
+          "brier_attribution": 0.7928742638611959,
+          "log_score_attribution": 0.8289599172605548
+        }
+      ],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Mixed",
+          "probability": 0.047425873177471926,
+          "entropy_contribution": 0.14458191710627616,
+          "entropy_share": 0.7575089144175963,
+          "local_brier_sensitivity": 0.036936155099076856,
+          "local_entropy_sensitivity": -0.013095457262828613
+        },
+        {
+          "candidate": "Risk-on",
+          "probability": 0.952574126820528,
+          "entropy_contribution": 0.04628305400178457,
+          "entropy_share": 0.24249108529285712,
+          "local_brier_sensitivity": -0.011145122400656144,
+          "local_entropy_sensitivity": 0.002355977852736927
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0000424100657268e-12,
+          "entropy_contribution": 2.7632150538385155e-11,
+          "entropy_share": 1.4477329375823525e-10,
+          "local_brier_sensitivity": -0.02488603439342235,
+          "local_entropy_sensitivity": 0.00980955072423874
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0000424100657268e-12,
+          "entropy_contribution": 2.7632150538385155e-11,
+          "entropy_share": 1.4477329375823525e-10,
+          "local_brier_sensitivity": -0.0009049983049983608,
+          "local_entropy_sensitivity": 0.0009299286858529463
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.047423861928370524,
+          "entropy_contribution": 0.14457779684415878,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 0.9999575917308107,
+          "missing_mass": 4.240826918933127e-05
+        },
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.9525337298024401,
+          "entropy_contribution": 0.04632148737915613,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 0.9999575917308107,
+          "missing_mass": 4.240826918933127e-05
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 0.9999809266955697,
+          "entropy_contribution": 1.9073122533667463e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999809266955697,
+          "missing_mass": 1.907330443029487e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2026-06-02",
+      "reference_state": "Risk-on",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.2815777251671062,
+        "Mixed": 0.717548416574439,
+        "Risk-off": 0.0008738582584547315
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.5472138160357727,
+        "brier": 1.0310070587328106,
+        "log_score": 1.2673467587959795
+      },
+      "prompt_span_attributions": [
+        {
+          "unit_id": "vol-regime-evidence-first-v1",
+          "text": "evidence-first ordering",
+          "tokens": [
+            "evidence-first",
+            "ordering"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 2.4691346705338607e-05,
+          "entropy_attribution": 0.005733881925547468,
+          "brier_attribution": -0.018028653476599432,
+          "log_score_attribution": -0.02234473593336106
+        },
+        {
+          "unit_id": "vol-regime-reordered-v1",
+          "text": "reordered state presentation",
+          "tokens": [
+            "reordered",
+            "state",
+            "presentation"
+          ],
+          "role": "prompt presentation",
+          "method": "information-equivalent whole-prompt variant",
+          "js_instability": 0.07421492643247432,
+          "entropy_attribution": -0.1324255046273206,
+          "brier_attribution": 0.7748651178883168,
+          "log_score_attribution": 0.8066477123141453
+        }
+      ],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Mixed",
+          "probability": 0.029312230751297696,
+          "entropy_contribution": 0.10346485875495524,
+          "entropy_share": 0.7817918749141117,
+          "local_brier_sensitivity": 0.0371238769910531,
+          "local_entropy_sensitivity": -0.012907958039529979
+        },
+        {
+          "candidate": "Risk-on",
+          "probability": 0.9706877692467023,
+          "entropy_contribution": 0.028878367149147762,
+          "entropy_share": 0.21820812466830963,
+          "local_brier_sensitivity": -0.011197642583047729,
+          "local_entropy_sensitivity": 0.002203741167882959
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 1.0000309237562433e-12,
+          "entropy_contribution": 2.7631844646655912e-11,
+          "entropy_share": 2.0878926326867465e-10,
+          "local_brier_sensitivity": -0.025015062607650757,
+          "local_entropy_sensitivity": 0.00974236345189251
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 1.0000309237562433e-12,
+          "entropy_contribution": 2.7631844646655912e-11,
+          "entropy_share": 2.0878926326867465e-10,
+          "local_brier_sensitivity": -0.0009111718003546178,
+          "local_entropy_sensitivity": 0.0009618534197545092
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 4,
+          "token": "B",
+          "probability": 0.02931132433504879,
+          "entropy_contribution": 0.10346256573405584,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 0.9999690771980059,
+          "missing_mass": 3.092280199412656e-05
+        },
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 0.9706577528629571,
+          "entropy_contribution": 0.028907490068821377,
+          "requested_k": 20,
+          "returned_k": 2,
+          "observed_mass": 0.9999690771980059,
+          "missing_mass": 3.092280199412656e-05
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999732974756593,
+          "entropy_contribution": 2.6702167825095166e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999732974756593,
+          "missing_mass": 2.6702524340671552e-05
+        },
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999885559736865,
+          "entropy_contribution": 1.1443960830359588e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999885559736865,
+          "missing_mass": 1.1444026313478517e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 0.9999923706345725,
+          "entropy_contribution": 7.629336323848139e-06,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999923706345725,
+          "missing_mass": 7.6293654275305656e-06
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 0.9999923706345725,
+          "entropy_contribution": 7.629336323848139e-06,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999923706345725,
+          "missing_mass": 7.6293654275305656e-06
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    },
+    {
+      "source_id": "daily-2018-08-07",
+      "reference_state": "Mixed",
+      "baseline_state_probabilities": {
+        "Risk-on": 0.6308428891864355,
+        "Mixed": 0.34539851079813355,
+        "Risk-off": 0.023758600015430953
+      },
+      "baseline_metrics": {
+        "normalized_state_entropy": 0.6796384055747268,
+        "brier": 0.8270303315770838,
+        "log_score": 1.0630564248071293
+      },
+      "prompt_span_attributions": [],
+      "output_candidate_attributions": [
+        {
+          "candidate": "Mixed",
+          "probability": 9.999885559706866e-13,
+          "entropy_contribution": 2.7630704905712938e-11,
+          "entropy_share": 0.321691069614338,
+          "local_brier_sensitivity": -0.035704813896943216,
+          "local_entropy_sensitivity": -0.00041936688662678437
+        },
+        {
+          "candidate": "Risk-off",
+          "probability": 9.999885559706866e-13,
+          "entropy_contribution": 2.7630704905712938e-11,
+          "entropy_share": 0.321691069614338,
+          "local_brier_sensitivity": 0.022601535838646866,
+          "local_entropy_sensitivity": 0.01393849108779462
+        },
+        {
+          "candidate": "Unsure",
+          "probability": 9.999885559706866e-13,
+          "entropy_contribution": 2.7630704905712938e-11,
+          "entropy_share": 0.321691069614338,
+          "local_brier_sensitivity": -2.3523102167868036e-05,
+          "local_entropy_sensitivity": 0.008442514907939359
+        },
+        {
+          "candidate": "Risk-on",
+          "probability": 0.9999999999970001,
+          "entropy_contribution": 2.9999336348351357e-12,
+          "entropy_share": 0.03492679115698598,
+          "local_brier_sensitivity": 0.01312680116046422,
+          "local_entropy_sensitivity": -0.021961639109107194
+        }
+      ],
+      "top_k_attributions": [
+        {
+          "position": 1,
+          "token": "orientation",
+          "probability": 0.9999771120783387,
+          "entropy_contribution": 2.2887659730796946e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999771120783387,
+          "missing_mass": 2.288792166127429e-05
+        },
+        {
+          "position": 5,
+          "token": "\"}",
+          "probability": 0.9999847413273523,
+          "entropy_contribution": 1.525855623359569e-05,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 0.9999847413273523,
+          "missing_mass": 1.5258672647733285e-05
+        },
+        {
+          "position": 0,
+          "token": "{\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 2,
+          "token": "_code",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 3,
+          "token": "\":\"",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        },
+        {
+          "position": 4,
+          "token": "A",
+          "probability": 1.0,
+          "entropy_contribution": -0.0,
+          "requested_k": 20,
+          "returned_k": 1,
+          "observed_mass": 1.0,
+          "missing_mass": 0.0
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "Attributions are conditional on the frozen ontology, prompt instrument, perturbation family, model, tokenizer, and calibrator.",
+    "A ranked token or span should not be described as the universal cause of model error.",
+    "Incomplete top-k probability mass yields partial rather than exact output attribution."
+  ],
+  "example": "SPY/SGOV current US broad-equity market-state benchmark",
+  "frozen": true,
+  "prompt_attribution_scope": "Whole-prompt information-equivalent variants; not individual prompt-token deletion.",
+  "output_attribution_scope": "Returned candidate codes and top-k tokens from stored provider responses.",
+  "provenance": {
+    "study": "belieflens-current-state-spy-sgov-v4",
+    "model": "gpt-5.2-2025-12-11",
+    "semantic_map_schema": "belieflens-frozen-semantic-map-v1",
+    "provider_api_calls": 0
+  }
+}
