@@ -1,14 +1,28 @@
-# Reproducibility supplement
+# BeliefLens reproducibility archive
 
-This reviewer archive accompanies *Calibrating Semantic Uncertainty from Observable Language-Model Probabilities*. It contains frozen derived observations and analysis artifacts; it makes no external model calls.
+This public archive accompanies *Calibrating Semantic Uncertainty from Observable Language-Model Probabilities*. It contains frozen derived observations, experimental designs, analysis artifacts and worked notebooks. Exact computational reanalysis makes no external model calls.
 
-## Citation
+## BeliefLens overview
 
-If you use the archived results, experimental design, semantic measurement construction or analysis code, please cite the paper:
+BeliefLens is a statistical measurement and auditing framework for language-model uncertainty. It groups prespecified, meaning-equivalent verbal continuations into declared application states, calibrates the resulting language-derived probabilities against a reference distribution, and tests whether the measurement is sufficiently identifiable, stable and well calibrated for its stated use.
+
+The framework distinguishes probabilities calculated from the model's language channel from numerical confidence printed in generated text. Its diagnostics include held-out recovery, uncertainty coverage, prompt-equivalence stability, incomplete expressed mass and reproducible provenance. BeliefLens measures a declared state distribution; it does not certify a downstream recommendation, trading strategy or future outcome.
+
+## Citation requirements
+
+If you use BeliefLens methodology, the semantic-map construction, experimental designs, archived results, figures, analysis code, financial examples or a derivative benchmark, cite both the accompanying paper and this reproducibility archive.
+
+**Methodology citation**
 
 > Dixon, M. (2026). *Calibrating Semantic Uncertainty from Observable Language-Model Probabilities*. Manuscript.
 
-Machine-readable citation metadata are provided in `CITATION.cff`. The citation will be updated with the journal DOI when one is assigned.
+**Software and archive citation**
+
+> Dixon, M. (2026). *BeliefLens reproducibility archive for Calibrating Semantic Uncertainty from Observable Language-Model Probabilities* (Version 1.0.0) [Data set and software]. <https://github.com/mfrdixon/BeliefLens-RSS-Reproducibility>
+
+In publications, reports and presentations, identify the BeliefLens version or commit hash, model and model version, prompt-instrument version, benchmark partition, observation date and any changes to the state ontology or calibration procedure. Do not describe altered experiments as exact reproductions.
+
+Machine-readable metadata are provided in [`CITATION.cff`](CITATION.cff). The preferred article citation will be updated when a journal DOI is assigned. Citation is part of responsible scholarly attribution and does not replace any applicable software, data-provider or third-party licence terms.
 
 ## Reproduction levels
 

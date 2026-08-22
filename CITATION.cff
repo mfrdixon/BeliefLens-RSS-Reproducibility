@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use these results, designs, or analysis code, please cite the accompanying paper."
+message: "If you use the BeliefLens methodology, results, designs, analysis code, finance examples, or a derivative benchmark, please cite both this archive and the accompanying paper."
 title: "Reproducibility archive for Calibrating Semantic Uncertainty from Observable Language-Model Probabilities"
 type: dataset
 authors:
