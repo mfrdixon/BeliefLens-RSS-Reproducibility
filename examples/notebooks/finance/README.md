@@ -8,7 +8,7 @@ The example has two deliberately separated modes.
 |---|---|---:|---:|
 | [`SPY_SGOV_public_reproduction.ipynb`](SPY_SGOV_public_reproduction.ipynb) | Inspect the frozen evidence, semantic map, diagnostics, calibrated decisions and comparative portfolio table | None | None |
 | [`SPY_SGOV_authenticated_workflow.ipynb`](SPY_SGOV_authenticated_workflow.ipynb) | Construct a private benchmark using user-supplied evidence, estimate cost, approve new observations and retrieve an audit certificate | BeliefLens key and user-supplied provider key | Shown before approval |
-| [`BeliefLens_LangChain_measurement.ipynb`](BeliefLens_LangChain_measurement.ipynb) | Apply an existing frozen measurement profile as a LangChain/LangGraph node without refitting calibration | BeliefLens key, provider key and measurement-profile ID | One frozen prompt-family measurement |
+| [`BeliefLens_LangChain_measurement.ipynb`](BeliefLens_LangChain_measurement.ipynb) | Load the frozen JSON calibration map and apply it locally as a LangChain/LangGraph node | None | None |
 
 ## What the example establishes
 
@@ -109,7 +109,7 @@ OTEL_EXPORTER_OTLP_HEADERS=<backend authentication headers, if required>
 
 `GET /v1/health` reports whether telemetry is enabled and configured. Every instrumented response carries `X-BeliefLens-Trace-Id`, which can be searched in the selected backend. Raw evidence, prompts and generated text are not exported by default.
 
-The standalone LangChain driver calls `POST /v1/measurements` through `BeliefLensMeasurementRunnable`. Its single `measurement_profile_id` resolves a content-hashed validation artifact binding the benchmark, ontology, prompt family, model identity, JSON calibrator and acceptance certificate. LangChain orchestrates the node and subsequent action; BeliefLens preserves native model probabilities and applies the frozen statistical measurement; OpenTelemetry supplies the vendor-neutral trace.
+The standalone LangChain driver makes no hosted request. It loads the content-hashed JSON calibration map, applies the declared additive-log-ratio transformation and frozen multinomial coefficients through a local `RunnableLambda`, and routes the resulting calibrated state distribution. The archived language-probability vector makes the example deterministic: no BeliefLens key, provider key or hosted CPU capacity is required. A production workflow can place a provider-specific probability-observation node upstream and choose managed BeliefLens services separately when centralized profiles, audit logs or server-issued certificates are required.
 
 ## Citation requirements
 
