@@ -92,7 +92,7 @@ Recommended provenance includes the evidence observation time, retrieval time, t
 
 The public notebook calls the immutable, keyless [`GET /v1/examples/SPY-trading/attributions`](https://demo.belieflens.org/v1/examples/SPY-trading/attributions) route and falls back to the archived [`attribution_result.json`](data/offline_reproduction/attribution_result.json). The authenticated notebook uses `POST /v1/attributions/analyze` on stored private-run measurements. Both routes perform retrospective analysis and make no model-provider calls.
 
-The notebooks visualize three distinct diagnostics: instability under information-equivalent prompt presentation, local output-candidate sensitivity of held-out Brier error, and returned top-k token contributions to observed entropy. These are conditional sensitivity and probability-decomposition results—not claims that a token is the model's universal internal cause of error. Missing top-k probability mass remains explicitly disclosed.
+The notebooks visualize prompt-presentation instability and the contribution of each declared semantic state to uncertainty and held-out recovery error. Internal response encodings are deliberately hidden from user-facing reports because they are measurement-device details rather than financial-language explanations. These diagnostics do not claim that particular words in the evidence caused the result; evidence-word attribution requires a separate controlled span-perturbation experiment.
 
 ## OpenTelemetry and LangChain
 
