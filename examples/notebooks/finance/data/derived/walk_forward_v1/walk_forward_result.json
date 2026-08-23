@@ -39,11 +39,11 @@
   "portfolio_metrics": {
     "weekly_walk_forward_calibrated": {
       "observations": 127,
-      "total_return": 0.058294945520928954,
-      "annualized_return": 0.11898930685845865,
-      "annualized_volatility": 0.0677086964343037,
-      "excess_sharpe_vs_sgov": 1.1589173253334486,
-      "maximum_drawdown": -0.026483508946880008
+      "total_return": 0.058599517536614076,
+      "annualized_return": 0.11962840497420046,
+      "annualized_volatility": 0.06773674698764018,
+      "excess_sharpe_vs_sgov": 1.1668738223009167,
+      "maximum_drawdown": 0.026483508946880008
     }
   },
   "limitations": [

@@ -30,3 +30,9 @@ def test_walk_forward_analysis_preserves_frozen_measurements() -> None:
     digest = hashlib.sha256(SOURCE.read_bytes()).hexdigest()
     assert result["source_artifacts_modified"] is False
     assert digest == result["source_sha256"]
+
+
+def test_maximum_drawdown_is_reported_as_a_loss_magnitude() -> None:
+    result = json.loads((DERIVED / "walk_forward_result.json").read_text())
+    drawdown = result["portfolio_metrics"]["weekly_walk_forward_calibrated"]["maximum_drawdown"]
+    assert 0.0 <= drawdown <= 1.0

@@ -48,7 +48,10 @@ def portfolio_metrics(returns: np.ndarray, safe_returns: np.ndarray) -> dict[str
         "annualized_return": float(wealth[-1] ** (252.0 / len(returns)) - 1.0),
         "annualized_volatility": float(np.std(returns, ddof=1) * np.sqrt(252.0)),
         "excess_sharpe_vs_sgov": float(np.mean(excess) / excess_sd * np.sqrt(252.0)) if excess_sd else 0.0,
-        "maximum_drawdown": float(np.min(drawdown)),
+        # Report the conventional loss magnitude so that, for example, 0.026
+        # means a 2.6% peak-to-trough decline.  This matches the archived
+        # comparator metrics used by the public notebook.
+        "maximum_drawdown": float(-np.min(drawdown)),
     }
 
 
@@ -113,7 +116,9 @@ def main() -> None:
         vintage_by_week[(date.isocalendar().year, date.isocalendar().week)] for date in test["date"]
     ]
     test["wf_spy_weight"] = test["wf_risk_on"] + 0.5 * test["wf_mixed"]
-    previous_weight = test["wf_spy_weight"].shift(1, fill_value=0.0)
+    # Match the archived comparator convention: the initial allocation is the
+    # starting portfolio, so turnover costs begin with the first rebalance.
+    previous_weight = test["wf_spy_weight"].shift(1, fill_value=float(test["wf_spy_weight"].iloc[0]))
     test["wf_turnover"] = (test["wf_spy_weight"] - previous_weight).abs()
     test["wf_strategy_return"] = (
         test["wf_spy_weight"] * test["portfolio_spy_return"]
