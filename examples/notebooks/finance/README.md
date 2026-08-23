@@ -14,6 +14,8 @@ The example has two deliberately separated modes.
 
 The statistical task is recovery of a declared broad-equity state from point-in-time evidence. The notebooks report identification, held-out recovery, conformal coverage, prompt stability, entropy and channel-comparison diagnostics. The portfolio calculation is a secondary illustration: it does not redefine the estimand, validate a production strategy or guarantee future returns.
 
+The public notebook now distinguishes two temporal questions. The original frozen map is a long-horizon transport experiment: calibration ends in 2020 and the untouched evaluation runs from January 2 through July 7, 2026. A separate derived prequential analysis fits an initial deployment calibrator from all 285 pre-2026 labelled measurements, updates it weekly, and admits a 2026 observation only after its five-day outcome has ended strictly before the next deployment date. Every vintage is applied only forward. The derived files live under `data/derived/walk_forward_v1`; no frozen measurement input is overwritten, and this deployment refit is not reported as new untouched validation evidence.
+
 The frozen files in `data/offline_reproduction/` are included so the public notebook remains inspectable without credentials. They contain the minimal approved evidence records, row-level measurements, semantic-map description, market-price history and archived API result. They contain no credentials or private service state.
 
 ## Supplied benchmark package
