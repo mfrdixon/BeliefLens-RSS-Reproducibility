@@ -1,0 +1,534 @@
+[
+  {
+    "deployment_date": "2026-01-02",
+    "window_start": "2025-01-02",
+    "window_end": "2025-12-31",
+    "core_start": "2025-01-02",
+    "core_end": "2025-06-30",
+    "validation_start": "2025-07-01",
+    "validation_end": "2025-09-30",
+    "conformal_start": "2025-10-01",
+    "conformal_end": "2025-12-31",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.2523272004277104,
+      "0.1": 0.956391633416618,
+      "1.0": 0.8369272364236575,
+      "10.0": 0.8479782504881517
+    },
+    "conformal_threshold": 0.6225278067154654
+  },
+  {
+    "deployment_date": "2026-01-05",
+    "window_start": "2025-01-03",
+    "window_end": "2026-01-02",
+    "core_start": "2025-01-03",
+    "core_end": "2025-07-01",
+    "validation_start": "2025-07-02",
+    "validation_end": "2025-10-01",
+    "conformal_start": "2025-10-02",
+    "conformal_end": "2026-01-02",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.23670262976794,
+      "0.1": 0.9388580619723523,
+      "1.0": 0.8192524108507113,
+      "10.0": 0.8302340691470291
+    },
+    "conformal_threshold": 0.6228221246299349
+  },
+  {
+    "deployment_date": "2026-01-12",
+    "window_start": "2025-01-13",
+    "window_end": "2026-01-09",
+    "core_start": "2025-01-13",
+    "core_end": "2025-07-09",
+    "validation_start": "2025-07-10",
+    "validation_end": "2025-10-08",
+    "conformal_start": "2025-10-09",
+    "conformal_end": "2026-01-09",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.1834265311075665,
+      "0.1": 0.9056705386870609,
+      "1.0": 0.7926379214277355,
+      "10.0": 0.8072371535389823
+    },
+    "conformal_threshold": 0.6444738694385355
+  },
+  {
+    "deployment_date": "2026-01-20",
+    "window_start": "2025-01-21",
+    "window_end": "2026-01-16",
+    "core_start": "2025-01-21",
+    "core_end": "2025-07-16",
+    "validation_start": "2025-07-17",
+    "validation_end": "2025-10-15",
+    "conformal_start": "2025-10-16",
+    "conformal_end": "2026-01-16",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.1153444174653766,
+      "0.1": 0.8681949216446525,
+      "1.0": 0.7687948373766248,
+      "10.0": 0.7848567651634389
+    },
+    "conformal_threshold": 0.6506479656913935
+  },
+  {
+    "deployment_date": "2026-01-26",
+    "window_start": "2025-01-27",
+    "window_end": "2026-01-23",
+    "core_start": "2025-01-27",
+    "core_end": "2025-07-22",
+    "validation_start": "2025-07-23",
+    "validation_end": "2025-10-21",
+    "conformal_start": "2025-10-22",
+    "conformal_end": "2026-01-23",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0925139397180277,
+      "0.1": 0.8655680947505693,
+      "1.0": 0.7761800833646755,
+      "10.0": 0.7936444682317011
+    },
+    "conformal_threshold": 0.6613860215277525
+  },
+  {
+    "deployment_date": "2026-02-02",
+    "window_start": "2025-02-03",
+    "window_end": "2026-01-30",
+    "core_start": "2025-02-03",
+    "core_end": "2025-07-29",
+    "validation_start": "2025-07-30",
+    "validation_end": "2025-10-28",
+    "conformal_start": "2025-10-29",
+    "conformal_end": "2026-01-30",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.086516020755023,
+      "0.1": 0.8802559996700687,
+      "1.0": 0.8027960066241655,
+      "10.0": 0.8182401275918597
+    },
+    "conformal_threshold": 0.6821215977354913
+  },
+  {
+    "deployment_date": "2026-02-09",
+    "window_start": "2025-02-10",
+    "window_end": "2026-02-06",
+    "core_start": "2025-02-10",
+    "core_end": "2025-08-05",
+    "validation_start": "2025-08-06",
+    "validation_end": "2025-11-04",
+    "conformal_start": "2025-11-05",
+    "conformal_end": "2026-02-06",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.131778983372854,
+      "0.1": 0.9124358910920674,
+      "1.0": 0.8269837278235685,
+      "10.0": 0.842760056531322
+    },
+    "conformal_threshold": 0.6954210509027814
+  },
+  {
+    "deployment_date": "2026-02-17",
+    "window_start": "2025-02-18",
+    "window_end": "2026-02-13",
+    "core_start": "2025-02-18",
+    "core_end": "2025-08-12",
+    "validation_start": "2025-08-13",
+    "validation_end": "2025-11-11",
+    "conformal_start": "2025-11-12",
+    "conformal_end": "2026-02-13",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.2330253278824634,
+      "0.1": 1.0159930795366565,
+      "1.0": 0.9296411838012831,
+      "10.0": 0.9517949526277847
+    },
+    "conformal_threshold": 0.6710653600758127
+  },
+  {
+    "deployment_date": "2026-02-23",
+    "window_start": "2025-02-24",
+    "window_end": "2026-02-20",
+    "core_start": "2025-02-24",
+    "core_end": "2025-08-18",
+    "validation_start": "2025-08-19",
+    "validation_end": "2025-11-17",
+    "conformal_start": "2025-11-18",
+    "conformal_end": "2026-02-20",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.171152524771955,
+      "0.1": 0.9503646585918051,
+      "1.0": 0.8619039995654516,
+      "10.0": 0.8731439290231747
+    },
+    "conformal_threshold": 0.6853279745349581
+  },
+  {
+    "deployment_date": "2026-03-02",
+    "window_start": "2025-03-03",
+    "window_end": "2026-02-27",
+    "core_start": "2025-03-03",
+    "core_end": "2025-08-25",
+    "validation_start": "2025-08-26",
+    "validation_end": "2025-11-24",
+    "conformal_start": "2025-11-25",
+    "conformal_end": "2026-02-27",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.1118830879381545,
+      "0.1": 0.9050534651718931,
+      "1.0": 0.8252988074463322,
+      "10.0": 0.837958652257292
+    },
+    "conformal_threshold": 0.68528614629244
+  },
+  {
+    "deployment_date": "2026-03-09",
+    "window_start": "2025-03-10",
+    "window_end": "2026-03-06",
+    "core_start": "2025-03-10",
+    "core_end": "2025-09-02",
+    "validation_start": "2025-09-03",
+    "validation_end": "2025-12-02",
+    "conformal_start": "2025-12-03",
+    "conformal_end": "2026-03-06",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0320498125175526,
+      "0.1": 0.8478306611614057,
+      "1.0": 0.7741817669694206,
+      "10.0": 0.7867630887615644
+    },
+    "conformal_threshold": 0.685654673911988
+  },
+  {
+    "deployment_date": "2026-03-16",
+    "window_start": "2025-03-17",
+    "window_end": "2026-03-13",
+    "core_start": "2025-03-17",
+    "core_end": "2025-09-09",
+    "validation_start": "2025-09-10",
+    "validation_end": "2025-12-09",
+    "conformal_start": "2025-12-10",
+    "conformal_end": "2026-03-13",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0102857225356083,
+      "0.1": 0.850966639670548,
+      "1.0": 0.8009896932437588,
+      "10.0": 0.8435458945302672
+    },
+    "conformal_threshold": 0.6607441478645415
+  },
+  {
+    "deployment_date": "2026-03-23",
+    "window_start": "2025-03-24",
+    "window_end": "2026-03-20",
+    "core_start": "2025-03-24",
+    "core_end": "2025-09-16",
+    "validation_start": "2025-09-17",
+    "validation_end": "2025-12-16",
+    "conformal_start": "2025-12-17",
+    "conformal_end": "2026-03-20",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 0.997487198185639,
+      "0.1": 0.8681282999217094,
+      "1.0": 0.8282683852443005,
+      "10.0": 0.8671846166347607
+    },
+    "conformal_threshold": 0.6237231447977137
+  },
+  {
+    "deployment_date": "2026-03-30",
+    "window_start": "2025-03-31",
+    "window_end": "2026-03-27",
+    "core_start": "2025-03-31",
+    "core_end": "2025-09-23",
+    "validation_start": "2025-09-24",
+    "validation_end": "2025-12-23",
+    "conformal_start": "2025-12-24",
+    "conformal_end": "2026-03-27",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 0.9992201424793565,
+      "0.1": 0.8702409093531968,
+      "1.0": 0.8274222380560176,
+      "10.0": 0.8343801491538549
+    },
+    "conformal_threshold": 0.6426220882324524
+  },
+  {
+    "deployment_date": "2026-04-06",
+    "window_start": "2025-04-04",
+    "window_end": "2026-04-02",
+    "core_start": "2025-04-04",
+    "core_end": "2025-09-29",
+    "validation_start": "2025-09-30",
+    "validation_end": "2025-12-30",
+    "conformal_start": "2025-12-31",
+    "conformal_end": "2026-04-02",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0155315586531206,
+      "0.1": 0.8998709428132374,
+      "1.0": 0.8613422866131675,
+      "10.0": 0.8669283466316565
+    },
+    "conformal_threshold": 0.6343267921983479
+  },
+  {
+    "deployment_date": "2026-04-13",
+    "window_start": "2025-04-11",
+    "window_end": "2026-04-10",
+    "core_start": "2025-04-11",
+    "core_end": "2025-10-06",
+    "validation_start": "2025-10-07",
+    "validation_end": "2026-01-07",
+    "conformal_start": "2026-01-08",
+    "conformal_end": "2026-04-10",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0438387927660302,
+      "0.1": 0.9291910270194195,
+      "1.0": 0.8875523651006609,
+      "10.0": 0.8907933427530471
+    },
+    "conformal_threshold": 0.633990689070228
+  },
+  {
+    "deployment_date": "2026-04-20",
+    "window_start": "2025-04-21",
+    "window_end": "2026-04-17",
+    "core_start": "2025-04-21",
+    "core_end": "2025-10-13",
+    "validation_start": "2025-10-14",
+    "validation_end": "2026-01-14",
+    "conformal_start": "2026-01-15",
+    "conformal_end": "2026-04-17",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0647477242706498,
+      "0.1": 0.9339297925220587,
+      "1.0": 0.8869632905892895,
+      "10.0": 0.8907738960875833
+    },
+    "conformal_threshold": 0.6451596216264166
+  },
+  {
+    "deployment_date": "2026-04-27",
+    "window_start": "2025-04-28",
+    "window_end": "2026-04-24",
+    "core_start": "2025-04-28",
+    "core_end": "2025-10-20",
+    "validation_start": "2025-10-21",
+    "validation_end": "2026-01-22",
+    "conformal_start": "2026-01-23",
+    "conformal_end": "2026-04-24",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0314902903087355,
+      "0.1": 0.8886276014405237,
+      "1.0": 0.834945619678457,
+      "10.0": 0.8400171106744965
+    },
+    "conformal_threshold": 0.6412952375180934
+  },
+  {
+    "deployment_date": "2026-05-04",
+    "window_start": "2025-05-05",
+    "window_end": "2026-05-01",
+    "core_start": "2025-05-05",
+    "core_end": "2025-10-27",
+    "validation_start": "2025-10-28",
+    "validation_end": "2026-01-29",
+    "conformal_start": "2026-01-30",
+    "conformal_end": "2026-05-01",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.003170872627679,
+      "0.1": 0.886019323039904,
+      "1.0": 0.8431982341659467,
+      "10.0": 0.8491781215465466
+    },
+    "conformal_threshold": 0.6097067361859443
+  },
+  {
+    "deployment_date": "2026-05-11",
+    "window_start": "2025-05-12",
+    "window_end": "2026-05-08",
+    "core_start": "2025-05-12",
+    "core_end": "2025-11-03",
+    "validation_start": "2025-11-04",
+    "validation_end": "2026-02-05",
+    "conformal_start": "2026-02-06",
+    "conformal_end": "2026-05-08",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0128524432557842,
+      "0.1": 0.8906678953773504,
+      "1.0": 0.841479555472005,
+      "10.0": 0.845904086601724
+    },
+    "conformal_threshold": 0.5123450078377014
+  },
+  {
+    "deployment_date": "2026-05-18",
+    "window_start": "2025-05-19",
+    "window_end": "2026-05-15",
+    "core_start": "2025-05-19",
+    "core_end": "2025-11-10",
+    "validation_start": "2025-11-11",
+    "validation_end": "2026-02-12",
+    "conformal_start": "2026-02-13",
+    "conformal_end": "2026-05-15",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 0.9964789105598105,
+      "0.1": 0.8480476510159625,
+      "1.0": 0.7898108158884662,
+      "10.0": 0.7920017238719186
+    },
+    "conformal_threshold": 0.4710147377741659
+  },
+  {
+    "deployment_date": "2026-05-26",
+    "window_start": "2025-05-27",
+    "window_end": "2026-05-22",
+    "core_start": "2025-05-27",
+    "core_end": "2025-11-17",
+    "validation_start": "2025-11-18",
+    "validation_end": "2026-02-20",
+    "conformal_start": "2026-02-23",
+    "conformal_end": "2026-05-22",
+    "selected_C": 10.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0218842614670423,
+      "0.1": 0.8474480856410065,
+      "1.0": 0.775437275724196,
+      "10.0": 0.7714576886118791
+    },
+    "conformal_threshold": 0.5597719593713202
+  },
+  {
+    "deployment_date": "2026-06-01",
+    "window_start": "2025-06-02",
+    "window_end": "2026-05-29",
+    "core_start": "2025-06-02",
+    "core_end": "2025-11-21",
+    "validation_start": "2025-11-24",
+    "validation_end": "2026-02-26",
+    "conformal_start": "2026-02-27",
+    "conformal_end": "2026-05-29",
+    "selected_C": 1.0,
+    "validation_log_loss_grid": {
+      "0.01": 0.9948245417085596,
+      "0.1": 0.8140715407225614,
+      "1.0": 0.7443633006918917,
+      "10.0": 0.7448883601236098
+    },
+    "conformal_threshold": 0.5614951905261485
+  },
+  {
+    "deployment_date": "2026-06-08",
+    "window_start": "2025-06-09",
+    "window_end": "2026-06-05",
+    "core_start": "2025-06-09",
+    "core_end": "2025-12-01",
+    "validation_start": "2025-12-02",
+    "validation_end": "2026-03-05",
+    "conformal_start": "2026-03-06",
+    "conformal_end": "2026-06-05",
+    "selected_C": 10.0,
+    "validation_log_loss_grid": {
+      "0.01": 0.9734065926871773,
+      "0.1": 0.7934227058390859,
+      "1.0": 0.7246967839595578,
+      "10.0": 0.7222868904156254
+    },
+    "conformal_threshold": 0.579054718548447
+  },
+  {
+    "deployment_date": "2026-06-15",
+    "window_start": "2025-06-16",
+    "window_end": "2026-06-12",
+    "core_start": "2025-06-16",
+    "core_end": "2025-12-08",
+    "validation_start": "2025-12-09",
+    "validation_end": "2026-03-12",
+    "conformal_start": "2026-03-13",
+    "conformal_end": "2026-06-12",
+    "selected_C": 10.0,
+    "validation_log_loss_grid": {
+      "0.01": 0.9797600694058428,
+      "0.1": 0.7739243562131083,
+      "1.0": 0.68885429416615,
+      "10.0": 0.6732555186719644
+    },
+    "conformal_threshold": 0.5876228607022604
+  },
+  {
+    "deployment_date": "2026-06-22",
+    "window_start": "2025-06-23",
+    "window_end": "2026-06-18",
+    "core_start": "2025-06-23",
+    "core_end": "2025-12-12",
+    "validation_start": "2025-12-15",
+    "validation_end": "2026-03-18",
+    "conformal_start": "2026-03-19",
+    "conformal_end": "2026-06-18",
+    "selected_C": 10.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0103109313761125,
+      "0.1": 0.7817577793703024,
+      "1.0": 0.6897527280621845,
+      "10.0": 0.6743649010166318
+    },
+    "conformal_threshold": 0.5876295212703748
+  },
+  {
+    "deployment_date": "2026-06-29",
+    "window_start": "2025-06-30",
+    "window_end": "2026-06-26",
+    "core_start": "2025-06-30",
+    "core_end": "2025-12-19",
+    "validation_start": "2025-12-22",
+    "validation_end": "2026-03-25",
+    "conformal_start": "2026-03-26",
+    "conformal_end": "2026-06-26",
+    "selected_C": 10.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0263348591816974,
+      "0.1": 0.7794436694380672,
+      "1.0": 0.6741275979942746,
+      "10.0": 0.6540149825009669
+    },
+    "conformal_threshold": 0.5817367811222023
+  },
+  {
+    "deployment_date": "2026-07-06",
+    "window_start": "2025-07-07",
+    "window_end": "2026-07-02",
+    "core_start": "2025-07-07",
+    "core_end": "2025-12-26",
+    "validation_start": "2025-12-29",
+    "validation_end": "2026-03-31",
+    "conformal_start": "2026-04-01",
+    "conformal_end": "2026-07-02",
+    "selected_C": 10.0,
+    "validation_log_loss_grid": {
+      "0.01": 1.0134400353027875,
+      "0.1": 0.7795862342880528,
+      "1.0": 0.6680301231671251,
+      "10.0": 0.640576473551463
+    },
+    "conformal_threshold": 0.5694158570037112
+  }
+]

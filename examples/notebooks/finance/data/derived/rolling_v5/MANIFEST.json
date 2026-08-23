@@ -1,0 +1,58 @@
+{
+  "schema_version": "belieflens-rolling-spy-sgov-benchmark-v5",
+  "model": "gpt-5.2-2025-12-11",
+  "model_snapshot_frozen": true,
+  "primary_prompt_id": "vol-regime-operational-v1",
+  "source_cache": "/Users/matthewdixon_1/Downloads/codex-workspace/papers/BeliefBench-Server/engine/outputs/belieflens-daily-spy-sgov-v2/derived/prices_total_return.csv",
+  "source_sha256": "de691d050c6552b4326b1d18a0bcaa9749045183428aa01c2545e92f223f73cc",
+  "records": 377,
+  "records_2025": 250,
+  "records_2026": 127,
+  "prompt_stability_sentinels": 50,
+  "rolling_window_trading_days": {
+    "calibration_core": 122,
+    "prompt_validation": 64,
+    "conformal": 64
+  },
+  "weekly_rule": "At each weekly deployment, use only observations dated before deployment; retain the latest 250 and roll every block forward.",
+  "refit_rule": "Select regularization on calibration_core versus prompt_validation, refit on their union, and reserve conformal for uncertainty calibration.",
+  "prompt_policy": "The operational prompt is frozen; alternatives monitor stability and are not optimization candidates.",
+  "states": [
+    "Risk-on",
+    "Mixed",
+    "Risk-off"
+  ],
+  "reference_definition": {
+    "target": "contemporaneous US broad-equity stress state",
+    "fit_partition": "pre-2020 reference definition retained from v4",
+    "columns": [
+      "SPY_ret_20d",
+      "SPY_vol_20d",
+      "breadth_20d",
+      "credit_ret_20d"
+    ],
+    "signs": [
+      -1.0,
+      1.0,
+      -1.0,
+      -1.0
+    ],
+    "mean": [
+      0.01423395848657785,
+      0.11024747609247855,
+      0.709799861973775,
+      0.001487208882684385
+    ],
+    "std": [
+      0.030260075326350933,
+      0.05887273667886463,
+      0.39496325907989105,
+      0.014128935168545022
+    ],
+    "cutpoints": [
+      -0.4285982295100722,
+      0.03020647211841879
+    ]
+  },
+  "frozen_predecessor_modified": false
+}

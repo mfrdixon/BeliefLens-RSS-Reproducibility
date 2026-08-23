@@ -1,0 +1,68 @@
+{
+  "schema_version": "belieflens-rolling-spy-sgov-backtest-v5",
+  "period": [
+    "2026-01-02",
+    "2026-07-07"
+  ],
+  "decision_rule": "daily allocation using the most recent weekly rolling semantic calibrator; returns begin after the decision timestamp",
+  "primary_rule": "SPY weight = P(Risk-on) + 0.5 P(Mixed)",
+  "uncertainty_rule": "shrink the primary weight toward 50% by (1-normalized entropy)/conformal-set size",
+  "transaction_cost": "5 basis points times absolute change in SPY weight; no artificial initial-turnover charge",
+  "strategy_selection": "rules prespecified before this v5 evaluation; no 2026 return was used to fit or select a rule",
+  "metrics": {
+    "BeliefLens linear state allocation": {
+      "observations": 127,
+      "annualized_return": 0.13038728065177052,
+      "annualized_volatility": 0.06707697090660554,
+      "excess_sharpe_vs_sgov": 1.319508127717712,
+      "maximum_drawdown_loss_magnitude": 0.026650880866614823,
+      "total_return": 0.0637139390778978,
+      "annualized_turnover": 10.786088653416636
+    },
+    "BeliefLens uncertainty-controlled": {
+      "observations": 127,
+      "annualized_return": 0.10349488711187793,
+      "annualized_volatility": 0.06642018593219666,
+      "excess_sharpe_vs_sgov": 0.9692224990039311,
+      "maximum_drawdown_loss_magnitude": 0.041281168020186776,
+      "total_return": 0.050884257241333275,
+      "annualized_turnover": 5.211754759624839
+    },
+    "SPY buy-and-hold": {
+      "observations": 127,
+      "annualized_return": 0.20144313875461384,
+      "annualized_volatility": 0.14064040496251046,
+      "excess_sharpe_vs_sgov": 1.1162525238720644,
+      "maximum_drawdown_loss_magnitude": 0.08881363466930292,
+      "total_return": 0.09690216435361809,
+      "annualized_turnover": 0.0
+    },
+    "SGOV buy-and-hold": {
+      "observations": 127,
+      "annualized_return": 0.03672733861135269,
+      "annualized_volatility": 0.0017977539146188054,
+      "excess_sharpe_vs_sgov": null,
+      "maximum_drawdown_loss_magnitude": 0.0,
+      "total_return": 0.018343830109192494,
+      "annualized_turnover": 0.0
+    },
+    "Fixed 50/50 SPY-SGOV": {
+      "observations": 127,
+      "annualized_return": 0.11881313960001272,
+      "annualized_volatility": 0.07018103342934676,
+      "excess_sharpe_vs_sgov": 1.1162525238720644,
+      "maximum_drawdown_loss_magnitude": 0.042316349036508494,
+      "total_return": 0.05821097514064011,
+      "annualized_turnover": 0.0
+    },
+    "Conventional 10% volatility control": {
+      "observations": 127,
+      "annualized_return": 0.09751152922245643,
+      "annualized_volatility": 0.10997059425260079,
+      "excess_sharpe_vs_sgov": 0.5714550390050591,
+      "maximum_drawdown_loss_magnitude": 0.07257504147751137,
+      "total_return": 0.04800872695513725,
+      "annualized_turnover": 5.940126879309122
+    }
+  }
+}

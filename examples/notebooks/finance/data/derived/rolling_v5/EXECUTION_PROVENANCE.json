@@ -1,0 +1,11 @@
+{
+  "schema_version": "belieflens-execution-provenance-v1",
+  "operational_measurements": 377,
+  "prompt_variant_measurements": 100,
+  "new_primary_requests_recorded_by_runner": 333,
+  "new_variant_requests_recorded_by_runner": 100,
+  "total_new_provider_requests": 433,
+  "reused_compatible_operational_measurements": 44,
+  "2026_operational_measurements": 127,
+  "correction": "The pre-run reuse estimate did not verify prompt_id and understated primary calls by 83. This provenance record reports the runner-observed actual count; no provider request was repeated."
+}

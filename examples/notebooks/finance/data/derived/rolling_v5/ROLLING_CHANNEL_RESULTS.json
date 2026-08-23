@@ -1,0 +1,19 @@
+{
+  "schema_version": "belieflens-rolling-coarsened-channel-v5",
+  "measurement_law": "observable top-k coarsening with explicit missingness and residual-mass features; no missing candidate is asserted to have zero probability",
+  "initial_blocks": {
+    "calibration_core": "2025-01-02 through 2025-06-30 (122 trading sessions)",
+    "prompt_validation": "2025-07-01 through 2025-09-30 (64 trading sessions)",
+    "conformal": "2025-10-01 through 2025-12-31 (64 trading sessions)"
+  },
+  "rolling_rule": "weekly deployment; latest 250 prior sessions split 122/64/64; every block rolls forward; no deployment-date or later observation enters fitting",
+  "test_records": 127,
+  "weekly_refits": 28,
+  "accuracy": 0.6456692913385826,
+  "log_loss": 0.6481005297947569,
+  "conformal_coverage": 0.889763779527559,
+  "mean_prediction_set_size": 1.4094488188976377,
+  "missing_candidate_rate": 1.0,
+  "mean_unobserved_mass_lower_bound": 0.0009893531440759707,
+  "temporal_integrity_passed": true
+}
