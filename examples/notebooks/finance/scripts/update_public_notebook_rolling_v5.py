@@ -20,17 +20,17 @@ The fitted language model is frozen before the 2026 evaluation period. Stored ob
 
 BeliefLens estimates the **current** market-stress probabilities
 
-\[
+$$
 (p_{\mathrm{on},t},p_{\mathrm{mixed},t},p_{\mathrm{off},t}).
-\]
+$$
 
 These are measurements of a contemporaneous state—not direct return forecasts. For this secondary portfolio illustration, a simple rule translates the complete probability vector into a long-only, fully invested allocation:
 
-\[
+$$
 w^{\mathrm{SPY}}_t=p_{\mathrm{on},t}+\tfrac12p_{\mathrm{mixed},t},
 \qquad
 w^{\mathrm{SGOV}}_t=1-w^{\mathrm{SPY}}_t.
-\]
+$$
 
 Thus a pure Risk-on state holds 100% SPY; a pure Mixed state holds 50% SPY and 50% SGOV; and a pure Risk-off state holds 100% SGOV. Intermediate probabilities produce intermediate weights. For example, probabilities (0.60, 0.30, 0.10) imply **75% SPY and 25% SGOV**. The allocation is recomputed each trading day using information available by that decision date and earns the following trading session's total returns. Rebalancing costs five basis points times the absolute change in SPY weight. There is no leverage, short position or return-prediction model hidden in the rule.
 
