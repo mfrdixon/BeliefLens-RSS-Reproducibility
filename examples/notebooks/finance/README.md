@@ -8,6 +8,7 @@ The example has two deliberately separated modes.
 |---|---|---:|---:|
 | [`SPY_SGOV_public_reproduction.ipynb`](SPY_SGOV_public_reproduction.ipynb) | Inspect the frozen evidence, semantic map, diagnostics, calibrated decisions and comparative portfolio table | None | None |
 | [`SPY_SGOV_authenticated_workflow.ipynb`](SPY_SGOV_authenticated_workflow.ipynb) | Construct a private benchmark using user-supplied evidence, estimate cost, approve new observations and retrieve an audit certificate | BeliefLens key and user-supplied provider key | Shown before approval |
+| [`BeliefLens_LangChain_measurement.ipynb`](BeliefLens_LangChain_measurement.ipynb) | Apply an existing frozen measurement profile as a LangChain/LangGraph node without refitting calibration | BeliefLens key, provider key and measurement-profile ID | One frozen prompt-family measurement |
 
 ## What the example establishes
 
@@ -104,7 +105,9 @@ OTEL_EXPORTER_OTLP_ENDPOINT=<backend OTLP HTTP endpoint>
 OTEL_EXPORTER_OTLP_HEADERS=<backend authentication headers, if required>
 ```
 
-`GET /v1/health` reports whether telemetry is enabled and configured. Every instrumented response carries `X-BeliefLens-Trace-Id`, which can be searched in the selected backend. Raw evidence, prompts and generated text are not exported by default. The notebooks end with a trace preview and a LangChain metadata example; LangChain is an optional orchestrator, while OpenTelemetry is the vendor-neutral observability boundary.
+`GET /v1/health` reports whether telemetry is enabled and configured. Every instrumented response carries `X-BeliefLens-Trace-Id`, which can be searched in the selected backend. Raw evidence, prompts and generated text are not exported by default.
+
+The standalone LangChain driver calls `POST /v1/measurements` through `BeliefLensMeasurementRunnable`. Its single `measurement_profile_id` resolves a content-hashed validation artifact binding the benchmark, ontology, prompt family, model identity, JSON calibrator and acceptance certificate. LangChain orchestrates the node and subsequent action; BeliefLens preserves native model probabilities and applies the frozen statistical measurement; OpenTelemetry supplies the vendor-neutral trace.
 
 ## Citation requirements
 
