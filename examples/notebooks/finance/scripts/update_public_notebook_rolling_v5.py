@@ -10,11 +10,31 @@ HERE = Path(__file__).resolve().parents[1]
 NOTEBOOK = HERE / "SPY_SGOV_public_reproduction.ipynb"
 
 
-SECTION = """## 6. Recent rolling SPY/SGOV evaluation
+SECTION = r"""## 6. Recent rolling SPY/SGOV evaluation
 
 This deployment study removes the stale-calibration concern by constructing a new measurement channel from 2025 observations. The initial blocks are **January–June 2025 calibration (122 trading sessions)**, **July–September prompt validation (64)** and **October–December conformal calibration (64)**. At the first decision in each 2026 trading week, all three boundaries advance together: the newest eligible sessions enter the conformal block and the oldest sessions leave calibration. Every 250-session window ends before its deployment date.
 
 The fitted language model is frozen before the 2026 evaluation period. Stored observations are reused here, so this notebook makes no provider request. Because the provider's top alternatives did not expose every candidate on every record, the estimator uses the observable candidate probabilities together with missingness indicators and the reported residual-mass bound. It does **not** silently treat an unreturned candidate as having known zero probability.
+
+### What exactly is the trading strategy?
+
+BeliefLens estimates the **current** market-stress probabilities
+
+\[
+(p_{\mathrm{on},t},p_{\mathrm{mixed},t},p_{\mathrm{off},t}).
+\]
+
+These are measurements of a contemporaneous state—not direct return forecasts. For this secondary portfolio illustration, a simple rule translates the complete probability vector into a long-only, fully invested allocation:
+
+\[
+w^{\mathrm{SPY}}_t=p_{\mathrm{on},t}+\tfrac12p_{\mathrm{mixed},t},
+\qquad
+w^{\mathrm{SGOV}}_t=1-w^{\mathrm{SPY}}_t.
+\]
+
+Thus a pure Risk-on state holds 100% SPY; a pure Mixed state holds 50% SPY and 50% SGOV; and a pure Risk-off state holds 100% SGOV. Intermediate probabilities produce intermediate weights. For example, probabilities (0.60, 0.30, 0.10) imply **75% SPY and 25% SGOV**. The allocation is recomputed each trading day using information available by that decision date and earns the following trading session's total returns. Rebalancing costs five basis points times the absolute change in SPY weight. There is no leverage, short position or return-prediction model hidden in the rule.
+
+The main comparison is against SPY, SGOV, fixed 50/50 SPY–SGOV and a conventional 10% volatility-controlled allocation. A separately declared uncertainty-controlled variant shrinks the BeliefLens weight toward 50/50 as normalized semantic entropy rises or the conformal prediction set widens; it is reported as an additional diagnostic and was not substituted for the primary rule after observing performance.
 """
 
 
