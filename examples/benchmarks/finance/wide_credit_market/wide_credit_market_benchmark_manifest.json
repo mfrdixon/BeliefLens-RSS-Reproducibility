@@ -1,0 +1,134 @@
+{
+  "schema_version": "belieflens-benchmark-manifest-v1",
+  "benchmark": {
+    "id": "broad-us-credit-market-distress-v0.1",
+    "name": "Broad US Credit-Market Distress Benchmark",
+    "version": "0.1.0",
+    "status": "provisional_research_candidate",
+    "description": "Weekly semantic-measurement benchmark spanning public spreads, traded credit, systemic credit conditions, bank lending standards, and loan performance.",
+    "domain": "finance",
+    "use_case": "semantic_state_measurement",
+    "record_count": 443
+  },
+  "estimand": {
+    "target_name": "current broad US credit-market distress state",
+    "evaluation_horizon": "current weekly evidence snapshot",
+    "scope": "system-wide US corporate and bank-intermediated credit conditions; not issuer default probability, expected loss, or a trading forecast"
+  },
+  "ontology": {
+    "id": "broad-us-credit-distress-v1",
+    "type": "finite_ordered",
+    "ordered_states": [
+      "Normal",
+      "Elevated",
+      "Stressed",
+      "Severe"
+    ],
+    "states": [
+      {
+        "value": "Normal",
+        "definition": "Credit availability, pricing, liquidity, and traded-credit behavior are broadly benign."
+      },
+      {
+        "value": "Elevated",
+        "definition": "Credit conditions show a meaningful but not broadly stressed deterioration."
+      },
+      {
+        "value": "Stressed",
+        "definition": "Deterioration is broad or pronounced across several credit channels."
+      },
+      {
+        "value": "Severe",
+        "definition": "Credit conditions are exceptionally impaired relative to the walk-forward historical record."
+      }
+    ],
+    "measurement_residual": {
+      "value": "Unclear",
+      "is_reference_state": false
+    }
+  },
+  "reference_construction": {
+    "type": "constructed_soft_ordinal_reference",
+    "warning": "The reference distribution is induced by a prespecified index and is not claimed to be the market's latent true posterior.",
+    "walk_forward_percentiles": true,
+    "minimum_history_weeks": 104,
+    "group_weights": {
+      "public_spreads": 0.3333333333333333,
+      "traded_credit": 0.3333333333333333,
+      "systemic_credit": 0.3333333333333333
+    },
+    "ordinal_thresholds": [
+      0.5,
+      0.75,
+      0.9
+    ],
+    "logistic_softness": 0.055,
+    "categorical_reference": "argmax of the constructed soft reference distribution",
+    "slow_context_policy": "SLOOS and delinquency observations are shifted by a conservative 45 days and excluded from the reference score."
+  },
+  "data": {
+    "path": "wide_credit_market_benchmark.csv",
+    "sha256": "b85c47c23ea49aa383294bbd4d371a3db6785341123d1d6cda564dcbf72f39c8",
+    "date_range": {
+      "start": "2018-01-26",
+      "end": "2026-07-17"
+    },
+    "primary_key": "source_id",
+    "required_columns": [
+      "source_id",
+      "decision_date",
+      "target_name",
+      "evaluation_horizon",
+      "evidence_text",
+      "reference_state",
+      "reference_p_normal",
+      "reference_p_elevated",
+      "reference_p_stressed",
+      "reference_p_severe",
+      "distress_score",
+      "spread_component",
+      "traded_component",
+      "systemic_component",
+      "partition",
+      "recent_temporal_holdout",
+      "point_in_time_certified",
+      "vintage_status"
+    ]
+  },
+  "partitions": {
+    "frozen": false,
+    "method": "deterministic state-stratified split with seed 20260827",
+    "counts": {
+      "calibration": 200,
+      "test": 133,
+      "conformal": 66,
+      "prompt_validation": 44
+    },
+    "temporal_holdout": {
+      "field": "recent_temporal_holdout",
+      "purpose": "separate recent-era distribution-shift audit; not used to fit the primary calibrator",
+      "start": "2024-11-08"
+    }
+  },
+  "class_counts": {
+    "Normal": 290,
+    "Elevated": 118,
+    "Stressed": 26,
+    "Severe": 9
+  },
+  "provenance": {
+    "price_archive": "examples/notebooks/finance/data/offline_reproduction/inputs/prices_total_return.csv",
+    "fred_series": [
+      "BAA10Y",
+      "AAA10Y",
+      "NFCICREDIT",
+      "STLFSI4",
+      "DRTSCILM",
+      "DRTSCIS",
+      "DRBLACBS"
+    ],
+    "provider_model_calls": 0,
+    "point_in_time_certified": false,
+    "freeze_gate": "Obtain archival-vintage verification, independent label-rule review, and license review before freezing or claiming deployment-valid point-in-time performance."
+  }
+}

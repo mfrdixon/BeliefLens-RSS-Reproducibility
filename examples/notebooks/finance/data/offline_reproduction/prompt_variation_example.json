@@ -1,0 +1,72 @@
+{
+  "scenario_id": "daily-2026-03-27",
+  "reference_state": "Risk-off",
+  "evidence": "As of 2026-03-27, SPY returned -2.2% over five trading days and -7.3% over twenty. Trailing twenty-day SPY annualized volatility was 14.9%. Over twenty days QQQ returned -7.4% and IWM returned -7.0%; breadth was 0.00. The HYG-minus-LQD twenty-day return was +1.2%. The TLT-minus-SHY twenty-day return was -4.8%.",
+  "prompt_ids": [
+    "vol-regime-operational-v1",
+    "vol-regime-evidence-first-v1",
+    "vol-regime-reordered-v1"
+  ],
+  "prompt_structures": [
+    "Definitions \u2192 historical summary",
+    "Historical summary \u2192 definitions",
+    "Target/horizon \u2192 history \u2192 reordered definitions"
+  ],
+  "prompt_excerpts": [
+    "Target: US broad-equity volatility and stress regime. Horizon: next five trading days.\nRisk-on means ... low-volatility, low-stress ... Evidence: As of 2026-03-27, SPY returned -2.2% ...",
+    "Evidence: As of 2026-03-27, SPY returned -2.2% ... [historical summary]\nTarget: US broad-equity volatility and stress regime. Horizon: next five trading days. Risk-on means ...",
+    "Horizon: next five trading days. Target: US broad-equity volatility and stress regime.\nEvidence: As of 2026-03-27, SPY returned -2.2% ... Risk-off denotes high volatility or stress ..."
+  ],
+  "raw_probabilities": [
+    [
+      1.000037070602736e-12,
+      0.8175744761920084,
+      0.18242552380599147,
+      1.000037070602736e-12
+    ],
+    [
+      9.999507419224909e-13,
+      0.3208213008239654,
+      0.6791786991740346,
+      9.999507419224909e-13
+    ],
+    [
+      9.99982178605377e-13,
+      0.7310585786285426,
+      0.2689414213694572,
+      9.99982178605377e-13
+    ]
+  ],
+  "raw_modal_states": [
+    "Mixed",
+    "Risk-off",
+    "Mixed"
+  ],
+  "calibrated_probabilities": [
+    [
+      0.00023336765409482881,
+      0.00041556106813514694,
+      0.99935107127777
+    ],
+    [
+      0.0001501361794573176,
+      0.00023808667684363616,
+      0.9996117771436991
+    ],
+    [
+      0.00020839890719966732,
+      0.0003623910232897345,
+      0.9994292100695106
+    ]
+  ],
+  "calibrated_modal_states": [
+    "Risk-off",
+    "Risk-off",
+    "Risk-off"
+  ],
+  "provenance": {
+    "source": "frozen variant_measurements/results.jsonl",
+    "model": "gpt-5.2-2025-12-11",
+    "provider_calls_added": 0
+  }
+}

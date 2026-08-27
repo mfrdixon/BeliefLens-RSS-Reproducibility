@@ -1,0 +1,20 @@
+{
+  "schema_version": "belieflens-annotation-instructions-v1",
+  "benchmark_id": "broad-us-credit-market-distress-v0.1",
+  "question": "Considering only the supplied point-in-time evidence, which declared state best describes current broad US credit-market distress?",
+  "ordered_responses": [
+    "Normal",
+    "Elevated",
+    "Stressed",
+    "Severe"
+  ],
+  "response_definitions": {
+    "Normal": "Credit pricing, liquidity, availability, and traded-credit behavior are broadly benign.",
+    "Elevated": "Meaningful deterioration is present, but conditions are not broadly stressed.",
+    "Stressed": "Deterioration is broad or pronounced across several credit channels.",
+    "Severe": "Credit conditions are exceptionally impaired across the available evidence."
+  },
+  "language_residual": "Unclear",
+  "review_rule": "Review the complete evidence record. Do not use information published after the decision date. Record ambiguity or source incompleteness separately rather than silently forcing certainty.",
+  "reference_warning": "The supplied soft reference is a constructed ordinal reference distribution, not a latent true posterior."
+}
