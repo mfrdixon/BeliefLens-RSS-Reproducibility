@@ -9,10 +9,17 @@ The example has two deliberately separated modes.
 | [`SPY_SGOV_public_reproduction.ipynb`](SPY_SGOV_public_reproduction.ipynb) | Inspect the frozen evidence, semantic map, diagnostics, calibrated decisions and comparative portfolio table | None | None |
 | [`SPY_SGOV_authenticated_workflow.ipynb`](SPY_SGOV_authenticated_workflow.ipynb) | Construct a private benchmark using user-supplied evidence, estimate cost, approve new observations and retrieve an audit certificate | BeliefLens key and user-supplied provider key | Shown before approval |
 | [`BeliefLens_LangChain_measurement.ipynb`](BeliefLens_LangChain_measurement.ipynb) | Load the frozen JSON calibration map and apply it locally as a LangChain/LangGraph node | None | None |
+| [`Stochastic_Semantic_Evidence_Graphs.ipynb`](Stochastic_Semantic_Evidence_Graphs.ipynb) | Inspect a provider-call-free semantic evidence-graph demonstration and learn the graph-backed API/certificate flow | None for the frozen example | None |
 
 ## What the example establishes
 
 The statistical task is recovery of a declared broad-equity state from point-in-time evidence. The notebooks report identification, held-out recovery, conformal coverage, prompt stability, entropy and channel-comparison diagnostics. The portfolio calculation is a secondary illustration: it does not redefine the estimand, validate a production strategy or guarantee future returns.
+
+## Semantic evidence graphs
+
+BeliefLens represents an AI workflow as auditable channels: source evidence, retrieved evidence, prompt and model response, semantic state and qualified decision input. It tests whether retrieval support is sufficient for the declared task, whether equivalent prompt changes preserve the semantic state, and whether the terminal probability remains calibrated and covered on held-out data. The resulting certificate is conditional on the frozen benchmark, ontology, service version and error tolerances; it supports pass, analyst-review or abstention decisions rather than a blanket safety claim.
+
+Open [`Stochastic_Semantic_Evidence_Graphs.ipynb`](Stochastic_Semantic_Evidence_Graphs.ipynb) for the keyless walkthrough. The authenticated workflow uses the hosted API to build and freeze the required evidence, prompt and partition records. The server-side API guide is available at [Stochastic Semantic Evidence Graphs](https://github.com/mfrdixon/BeliefBench-Server/blob/main/docs/STOCHASTIC_SEMANTIC_EVIDENCE_GRAPHS.md).
 
 The illustrative strategy is deliberately transparent. Each day it sets the SPY weight to `P(Risk-on) + 0.5 × P(Mixed)` and invests the remainder in SGOV; the next trading session's total returns are then recorded. A pure Risk-on distribution therefore gives 100% SPY, a pure Mixed distribution gives 50/50, and a pure Risk-off distribution gives 100% SGOV. The strategy is long-only and fully invested, with five basis points charged on each absolute change in SPY weight.
 

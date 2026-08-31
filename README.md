@@ -39,6 +39,7 @@ The paper distinguishes two reproducibility tasks.
 - `figures/`: the plotted data products included in the manuscript.
 - `examples/notebooks/finance/SPY_SGOV_public_reproduction.ipynb`: keyless, non-configurable reproduction of the frozen SPY/SGOV semantic-state and portfolio example. It makes no provider calls and falls back transparently to the archived API response when the public demonstration route is unavailable.
 - `examples/notebooks/finance/SPY_SGOV_authenticated_workflow.ipynb`: separate configurable workflow for user-supplied evidence. It requires a [BeliefLens API key](https://demo.belieflens.org/signup) and a user-supplied model-provider key, presents a cost estimate before execution and preserves the resulting audit certificate.
+- `examples/notebooks/finance/Stochastic_Semantic_Evidence_Graphs.ipynb`: keyless walkthrough of the semantic evidence graph, public diagnostics and the graph-backed API/certificate workflow.
 - `examples/notebooks/finance/data/offline_reproduction/`: immutable inputs, measurements, fitted semantic-map artifact, diagnostics and expected outputs used by the finance notebooks.
 - `SHA256SUMS`: integrity hashes for the archived files.
 
