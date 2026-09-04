@@ -1,12 +1,14 @@
 {
-  "prompt": "Based only on the supplied evidence, what changed in the policy rate?",
+  "prompt": "Based only on the supplied time-series evidence, did credit-market stress rise, and did it remain above its starting level at the latest observation? Answer in one sentence of at most 15 words.",
   "auto_retrieve": false,
+  "max_answer_tokens": 160,
+  "max_spans": 2,
   "evidence": [
     {
-      "source_id": "illustrative-policy-release",
-      "title": "Illustrative policy release",
-      "uri": "https://example.org/illustrative-policy-release",
-      "passage": "At its meeting, the committee raised the target range from 5.00–5.25% to 5.25–5.50%."
+      "source_id": "credit-timeseries-csv",
+      "title": "Deterministic summary of bundled ALFRED time series",
+      "uri": "credit_market_timeseries.csv",
+      "passage": "From 2020-02-28 to 2020-05-01, the Baa corporate-minus-Treasury spread rose from 2.38 to 3.25 after peaking at 4.23; Baa-minus-Aaa dispersion rose from 0.81 to 1.47 after peaking at 1.91; and the NFCI credit subindex rose from -0.77 to -0.12 after peaking at -0.11. Higher values indicate tighter or more stressed credit conditions."
     }
   ]
 }

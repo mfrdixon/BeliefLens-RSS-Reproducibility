@@ -1,1 +1,556 @@
-{"certificate":{"certificate_id":"seg_stability_41c9e2f137b8b1a3","certificate_type":"conditional_stability","calibrated":false,"factual_correctness_assessed":false,"overall_status":"warn","overall_color":"orange","issued_at":"2026-09-04T00:37:31.114871+00:00","scope":"Observed phrase probability, prompt stability, evidence sensitivity and provenance integrity for this execution.","limitations":["This is not a calibration or factual-correctness certificate.","Attributions are conditional sensitivities unless interventions were randomized.","Untested prompts, evidence and model versions remain outside scope."]},"gates":{"prompt_stability":{"status":"orange","maximum_js":null,"maximum_semantic_instability":0.18,"variants_tested":2},"continuation_uncertainty":{"status":"green","maximum_normalized_entropy":null,"maximum_mean_token_surprisal":0.208634},"provenance_integrity":{"status":"green","coverage":1.0},"claim_attribution":{"status":"green","method":"source-specific natural-label token laws with unresolved mass retained and Frechet bounds across sources"},"evidence_sensitivity":{"status":"observed","mean_js":1.0,"interventions_tested":2},"composition_stability":{"status":"green","maximum_descent_defect":0.14319,"minimum_alignment_coverage":1.0,"compositions_tested":1}},"spans":[{"span_id":"claim-1","start":0,"end":87,"text":"The committee raised the target range for the policy rate from 5.00–5.25% to 5.25–5.50%","kind":"response phrase","status":"green","continuation_uncertainty":0.063103,"phrase_probability":{"method":"token-aligned complete-phrase probability","measurement_source":"same_generation","log_probability":-1.89310062,"mean_token_log_probability":-0.06310335,"geometric_mean_token_probability":0.93884644,"scored_tokens":30,"returned_model":"openai/gpt-oss-20b"},"prompt_instability":{"mean_js":0.09,"maximum_js":0.09,"mean_logprob_shift":null,"maximum_logprob_shift":null,"mean_semantic_instability":0.09,"maximum_semantic_instability":0.09,"variants_tested":1},"evidence_sensitivity":{"mean_js":1.0,"mean_absolute_logprob_shift":null,"mean_semantic_influence":1.0,"interventions_tested":1,"interpretation":"conditional sensitivity, not a causal effect"},"composition_stability":{"mean_descent_defect":null,"maximum_descent_defect":null,"compositions_tested":0,"interpretation":"claim-level approximate descent under the declared presentation and evidence transformations"},"provenance":[{"source_id":"illustrative-policy-release","title":"Illustrative policy release","passage":"At its meeting, the committee raised the target range from 5.00–5.25% to 5.25–5.50%.","uri":"https://example.org/illustrative-policy-release","retrieved_at":null,"retrieval_provider":null,"authority_class":"unclassified","authority_score":null,"authority_reason":null,"authority_assessment":null,"measurement_status":"measured_uncalibrated","distribution":{"supported_by_evidence":0.9999938011170572,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"selected_relation":"supported_by_evidence","measurement":{"method":"natural-label next-token law with unobserved vocabulary mass retained","returned_model":"openai/gpt-oss-20b","observed_alternatives":["supported_by_evidence"],"unresolved_relation_probability":6.2e-06},"unresolved_relation_probability":6.2e-06,"recheck":{"measurement_status":"measured_uncalibrated","distribution":{"supported_by_evidence":0.999994039535551,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"selected_relation":"supported_by_evidence","measurement":{"method":"natural-label next-token law with unobserved vocabulary mass retained","returned_model":"openai/gpt-oss-20b","observed_alternatives":["supported_by_evidence"],"unresolved_relation_probability":5.96e-06},"unresolved_relation_probability":5.96e-06},"recheck_relation_instability_tv":1.2e-07}],"candidate_evidence":[{"source_id":"illustrative-policy-release","title":"Illustrative policy release","passage":"At its meeting, the committee raised the target range from 5.00–5.25% to 5.25–5.50%.","uri":"https://example.org/illustrative-policy-release","retrieved_at":null,"retrieval_provider":null,"authority_class":"unclassified","authority_score":null,"authority_reason":null,"authority_assessment":null,"measurement_status":"measured_uncalibrated","distribution":{"supported_by_evidence":0.9999938011170572,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"selected_relation":"supported_by_evidence","measurement":{"method":"natural-label next-token law with unobserved vocabulary mass retained","returned_model":"openai/gpt-oss-20b","observed_alternatives":["supported_by_evidence"],"unresolved_relation_probability":6.2e-06},"unresolved_relation_probability":6.2e-06,"recheck":{"measurement_status":"measured_uncalibrated","distribution":{"supported_by_evidence":0.999994039535551,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"selected_relation":"supported_by_evidence","measurement":{"method":"natural-label next-token law with unobserved vocabulary mass retained","returned_model":"openai/gpt-oss-20b","observed_alternatives":["supported_by_evidence"],"unresolved_relation_probability":5.96e-06},"unresolved_relation_probability":5.96e-06},"recheck_relation_instability_tv":1.2e-07}],"attribution_uncertainty":{"measurement_status":"measured_uncalibrated","sources_measured":1,"attributable_probability_bounds":[0.9999938,0.9999938],"residual_unattributed_probability_bounds":[6.2e-06,6.2e-06],"contradiction_probability_bounds":[0.0,0.0],"maximum_unresolved_relation_probability":6.2e-06,"dependence_assumption":"none; Frechet union bounds"},"attribution_status":"green","reasons":["The observed phrase has comparatively strong token-level support."],"recommended_actions":[]},{"span_id":"claim-2","start":89,"end":134,"text":"This indicates an increase in the policy rate","kind":"response phrase","status":"orange","continuation_uncertainty":0.208634,"phrase_probability":{"method":"token-aligned complete-phrase probability","measurement_source":"same_generation","log_probability":-1.66906911,"mean_token_log_probability":-0.20863364,"geometric_mean_token_probability":0.81169255,"scored_tokens":8,"returned_model":"openai/gpt-oss-20b"},"prompt_instability":{"mean_js":0.18,"maximum_js":0.18,"mean_logprob_shift":null,"maximum_logprob_shift":null,"mean_semantic_instability":0.18,"maximum_semantic_instability":0.18,"variants_tested":1},"evidence_sensitivity":{"mean_js":1.0,"mean_absolute_logprob_shift":null,"mean_semantic_influence":1.0,"interventions_tested":1,"interpretation":"conditional sensitivity, not a causal effect"},"composition_stability":{"mean_descent_defect":null,"maximum_descent_defect":null,"compositions_tested":0,"interpretation":"claim-level approximate descent under the declared presentation and evidence transformations"},"provenance":[{"source_id":"illustrative-policy-release","title":"Illustrative policy release","passage":"At its meeting, the committee raised the target range from 5.00–5.25% to 5.25–5.50%.","uri":"https://example.org/illustrative-policy-release","retrieved_at":null,"retrieval_provider":null,"authority_class":"unclassified","authority_score":null,"authority_reason":null,"authority_assessment":null,"measurement_status":"measured_uncalibrated","distribution":{"supported_by_evidence":0.9999748468397467,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"selected_relation":"supported_by_evidence","measurement":{"method":"natural-label next-token law with unobserved vocabulary mass retained","returned_model":"openai/gpt-oss-20b","observed_alternatives":["supported_by_evidence"],"unresolved_relation_probability":2.515e-05},"unresolved_relation_probability":2.515e-05,"recheck":{"measurement_status":"measured_uncalibrated","distribution":{"supported_by_evidence":0.9999802112572834,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"selected_relation":"supported_by_evidence","measurement":{"method":"natural-label next-token law with unobserved vocabulary mass retained","returned_model":"openai/gpt-oss-20b","observed_alternatives":["supported_by_evidence"],"unresolved_relation_probability":1.979e-05},"unresolved_relation_probability":1.979e-05},"recheck_relation_instability_tv":2.68e-06}],"candidate_evidence":[{"source_id":"illustrative-policy-release","title":"Illustrative policy release","passage":"At its meeting, the committee raised the target range from 5.00–5.25% to 5.25–5.50%.","uri":"https://example.org/illustrative-policy-release","retrieved_at":null,"retrieval_provider":null,"authority_class":"unclassified","authority_score":null,"authority_reason":null,"authority_assessment":null,"measurement_status":"measured_uncalibrated","distribution":{"supported_by_evidence":0.9999748468397467,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"selected_relation":"supported_by_evidence","measurement":{"method":"natural-label next-token law with unobserved vocabulary mass retained","returned_model":"openai/gpt-oss-20b","observed_alternatives":["supported_by_evidence"],"unresolved_relation_probability":2.515e-05},"unresolved_relation_probability":2.515e-05,"recheck":{"measurement_status":"measured_uncalibrated","distribution":{"supported_by_evidence":0.9999802112572834,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"selected_relation":"supported_by_evidence","measurement":{"method":"natural-label next-token law with unobserved vocabulary mass retained","returned_model":"openai/gpt-oss-20b","observed_alternatives":["supported_by_evidence"],"unresolved_relation_probability":1.979e-05},"unresolved_relation_probability":1.979e-05},"recheck_relation_instability_tv":2.68e-06}],"attribution_uncertainty":{"measurement_status":"measured_uncalibrated","sources_measured":1,"attributable_probability_bounds":[0.99997485,0.99997485],"residual_unattributed_probability_bounds":[2.515e-05,2.515e-05],"contradiction_probability_bounds":[0.0,0.0],"maximum_unresolved_relation_probability":2.515e-05,"dependence_assumption":"none; Frechet union bounds"},"attribution_status":"green","reasons":["The observed phrase has comparatively strong token-level support.","Prompt stability is incomplete or only weakly tested."],"recommended_actions":["Run additional meaning-equivalent prompt variants."]}],"provenance_ranking":[{"source_id":"illustrative-policy-release","title":"Illustrative policy release","status":"red","uncertainty_contribution":0.0,"phrase_law_influence_js":1.0,"semantic_influence_js":1.0,"maximum_phrase_law_influence_js":1.0,"maximum_semantic_influence_js":1.0,"semantic_claim_influence":1.0,"affected_spans":["claim-1","claim-2"],"interventions":2,"interpretation":"removal materially changes or removes the matched claim","authority_class":"unclassified","authority_score":null,"authority_reason":null,"authority_assessment":null}],"provenance_ranking_interpretation":"Ranks conditional source-removal sensitivity. Positive contribution means the source raises the observed phrase's mean token log probability; negative contribution means it lowers it. These are not causal effects unless interventions were randomized.","recommended_actions":["Run additional meaning-equivalent prompt variants."],"metadata":{"model":"openai/gpt-oss-20b","provider_surface":"Together serverless GPT-OSS via Harmony chat template and output logprobs","interaction_abstraction":"together-harmony-batched-phrase-law-v2","provider_base_url":"https://api.together.xyz/v1","provider":{"response_id":"oys3z92-fdNmn-a358ece37f41feff","returned_model":"openai/gpt-oss-20b","system_fingerprint":null,"channel":"final"},"measurement_method":"same-generation token log probabilities aggregated over claim-level spans; independently generated counterfactual answers with local deterministic claim alignment","claim_alignment":"local lexical hybrid (token Jaccard and normalized sequence similarity); not a calibrated entailment model","lexical_algebra_design":{"base_context":"c","presentation_context":"g_p(c)","evidence_context":"g_e(c)","composed_context":"g_e(g_p(c))","composition_test":"compare B(g_e(c)) with B(g_e(g_p(c)))"},"counterfactual_responses":[{"counterfactual_id":"meaning-preserving-presentation-1","response":"The committee raised the target range from 5.00–5.25% to 5.25–5.50%. This change represents an increase in the policy rate.","introduced_claims":[]},{"counterfactual_id":"remove-illustrative-policy-release","response":"I’m sorry, but I don’t have any evidence to reference, so I can’t determine what changed in the policy rate.","introduced_claims":["I’m sorry, but I don’t have any evidence to reference, so I can’t determine what changed in the policy rate"]},{"counterfactual_id":"remove-illustrative-policy-release-after-presentation-1","response":"I’m sorry, but I don’t have any evidence to refer to, so I can’t say what changed in the policy rate.","introduced_claims":[]}],"prompt_variants":1,"source_removals":1,"composition_tests":1,"analysis_caps":{"requested_maximum_phrases":8,"displayed_measured_phrases":2,"phrase_cap_applied_for_complete_relation_measurement":true,"requested_maximum_sources":3,"sources_analyzed":1,"relation_measurements_per_displayed_claim_source_pair":2,"maximum_provider_calls":32,"prompt_variants":1,"source_removals":1},"provider_budget":{"provider_calls":8,"maximum_provider_calls":32,"estimated_input_tokens_reserved":843,"maximum_estimated_input_tokens":120000,"actual_input_tokens":1169,"actual_output_tokens":499,"estimated_provider_cost_usd":0.00015825},"preflight_budget":{"planned_provider_calls":4,"maximum_provider_calls":32,"worst_case_estimated_input_tokens":3484,"maximum_estimated_input_tokens":120000},"calibrated":false,"analysis_mode":"evidence_grounded","evidence_supplied":true,"evidence_origin":"user_supplied","retrieval_providers":[],"training_provenance_available":false,"retrieval_errors":[],"retrieval_source_policy":null},"semantic_evidence_graph":{"graph_type":"source_preserving_claim_evidence_sseg","nodes":[{"node_id":"query","node_type":"query","value":"Based only on the supplied evidence, what changed in the policy rate?"},{"node_id":"answer","node_type":"answer","value":"The committee raised the target range for the policy rate from 5.00–5.25% to 5.25–5.50%. This indicates an increase in the policy rate."},{"node_id":"passage:illustrative-policy-release","node_type":"evidence_passage","source_id":"illustrative-policy-release","uri":"https://example.org/illustrative-policy-release","authority_class":"unclassified"},{"node_id":"claim:1","node_type":"answer_claim","value":"The committee raised the target range for the policy rate from 5.00–5.25% to 5.25–5.50%"},{"node_id":"claim:2","node_type":"answer_claim","value":"This indicates an increase in the policy rate"}],"edges":[{"source":"query","target":"answer","edge_type":"conditions_generation"},{"source":"passage:illustrative-policy-release","target":"claim:1","edge_type":"claim_evidence_relation","distribution":{"supported_by_evidence":0.9999938011170572,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"measurement_status":"measured_uncalibrated","recheck_distribution":{"supported_by_evidence":0.999994039535551,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"recheck_relation_instability_tv":1.2e-07},{"source":"passage:illustrative-policy-release","target":"claim:2","edge_type":"claim_evidence_relation","distribution":{"supported_by_evidence":0.9999748468397467,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"measurement_status":"measured_uncalibrated","recheck_distribution":{"supported_by_evidence":0.9999802112572834,"materially_qualified":0.0,"contradicted_by_evidence":0.0,"insufficient_evidence":0.0},"recheck_relation_instability_tv":2.68e-06},{"source":"claim:1","target":"answer","edge_type":"composes"},{"source":"claim:2","target":"answer","edge_type":"composes"}],"factorization":"local claim-evidence relation kernels; no cross-source independence assumption"},"prompt":"Based only on the supplied evidence, what changed in the policy rate?","response":"The committee raised the target range for the policy rate from 5.00–5.25% to 5.25–5.50%. This indicates an increase in the policy rate.","public_budget":{"day_utc":"2026-09-04","limit_usd":3.0,"debited_usd":0.05,"remaining_usd":2.95,"request_count":1,"accounting":"conservative pre-request debit","request_debit_usd":0.05},"trace_id":"f6aee053ce8602bf813a4d686e4b0d7c"}
+{
+  "certificate": {
+    "certificate_id": "seg_stability_ad340dbdbfe0dd3e",
+    "certificate_type": "conditional_stability",
+    "calibrated": false,
+    "factual_correctness_assessed": false,
+    "overall_status": "warn",
+    "overall_color": "orange",
+    "issued_at": "2026-09-04T01:09:51.577601+00:00",
+    "scope": "Observed phrase probability, prompt stability, evidence sensitivity and provenance integrity for this execution.",
+    "limitations": [
+      "This is not a calibration or factual-correctness certificate.",
+      "Attributions are conditional sensitivities unless interventions were randomized.",
+      "Untested prompts, evidence and model versions remain outside scope."
+    ]
+  },
+  "gates": {
+    "prompt_stability": {
+      "status": "orange",
+      "maximum_js": null,
+      "maximum_semantic_instability": 0.240862,
+      "variants_tested": 2
+    },
+    "continuation_uncertainty": {
+      "status": "green",
+      "maximum_normalized_entropy": null,
+      "maximum_mean_token_surprisal": 0.264188
+    },
+    "provenance_integrity": {
+      "status": "green",
+      "coverage": 1.0
+    },
+    "claim_attribution": {
+      "status": "green",
+      "method": "source-specific natural-label token laws with unresolved mass retained and Frechet bounds across sources"
+    },
+    "evidence_sensitivity": {
+      "status": "observed",
+      "mean_js": 1.0,
+      "interventions_tested": 2
+    },
+    "composition_stability": {
+      "status": "orange",
+      "maximum_descent_defect": 0.323958,
+      "minimum_alignment_coverage": 1.0,
+      "compositions_tested": 1
+    }
+  },
+  "spans": [
+    {
+      "span_id": "claim-1",
+      "start": 0,
+      "end": 30,
+      "text": "Yes, credit\u2011market stress rose",
+      "kind": "response phrase",
+      "status": "green",
+      "continuation_uncertainty": 0.181747,
+      "phrase_probability": {
+        "method": "token-aligned complete-phrase probability",
+        "measurement_source": "same_generation",
+        "log_probability": -1.27222985,
+        "mean_token_log_probability": -0.18174712,
+        "geometric_mean_token_probability": 0.83381217,
+        "scored_tokens": 7,
+        "returned_model": "openai/gpt-oss-20b"
+      },
+      "prompt_instability": {
+        "mean_js": 0.09,
+        "maximum_js": 0.09,
+        "mean_logprob_shift": null,
+        "maximum_logprob_shift": null,
+        "mean_semantic_instability": 0.09,
+        "maximum_semantic_instability": 0.09,
+        "variants_tested": 1
+      },
+      "evidence_sensitivity": {
+        "mean_js": 1.0,
+        "mean_absolute_logprob_shift": null,
+        "mean_semantic_influence": 1.0,
+        "interventions_tested": 1,
+        "interpretation": "conditional sensitivity, not a causal effect"
+      },
+      "composition_stability": {
+        "mean_descent_defect": null,
+        "maximum_descent_defect": null,
+        "compositions_tested": 0,
+        "interpretation": "claim-level approximate descent under the declared presentation and evidence transformations"
+      },
+      "provenance": [
+        {
+          "source_id": "credit-timeseries-csv",
+          "title": "Deterministic summary of bundled ALFRED time series",
+          "passage": "From 2020-02-28 to 2020-05-01, the Baa corporate-minus-Treasury spread rose from 2.38 to 3.25 after peaking at 4.23; Baa-minus-Aaa dispersion rose from 0.81 to 1.47 after peaking at 1.91; and the NFCI credit subindex rose from -0.77 to -0.12 after peaking at -0.11. Higher values indicate tighter or more stressed credit conditions.",
+          "uri": "credit_market_timeseries.csv",
+          "retrieved_at": null,
+          "retrieval_provider": null,
+          "authority_class": "unclassified",
+          "authority_score": null,
+          "authority_reason": null,
+          "authority_assessment": null,
+          "measurement_status": "measured_uncalibrated",
+          "distribution": {
+            "supported_by_evidence": 0.9999920129776643,
+            "materially_qualified": 0.0,
+            "contradicted_by_evidence": 0.0,
+            "insufficient_evidence": 0.0
+          },
+          "selected_relation": "supported_by_evidence",
+          "measurement": {
+            "method": "natural-label next-token law with unobserved vocabulary mass retained",
+            "returned_model": "openai/gpt-oss-20b",
+            "observed_alternatives": [
+              "supported_by_evidence"
+            ],
+            "unresolved_relation_probability": 7.99e-06
+          },
+          "unresolved_relation_probability": 7.99e-06,
+          "recheck": {
+            "measurement_status": "measured_uncalibrated",
+            "distribution": {
+              "supported_by_evidence": 0.999996542930667,
+              "materially_qualified": 0.0,
+              "contradicted_by_evidence": 0.0,
+              "insufficient_evidence": 0.0
+            },
+            "selected_relation": "supported_by_evidence",
+            "measurement": {
+              "method": "natural-label next-token law with unobserved vocabulary mass retained",
+              "returned_model": "openai/gpt-oss-20b",
+              "observed_alternatives": [
+                "supported_by_evidence"
+              ],
+              "unresolved_relation_probability": 3.46e-06
+            },
+            "unresolved_relation_probability": 3.46e-06
+          },
+          "recheck_relation_instability_tv": 2.26e-06
+        }
+      ],
+      "candidate_evidence": [
+        {
+          "source_id": "credit-timeseries-csv",
+          "title": "Deterministic summary of bundled ALFRED time series",
+          "passage": "From 2020-02-28 to 2020-05-01, the Baa corporate-minus-Treasury spread rose from 2.38 to 3.25 after peaking at 4.23; Baa-minus-Aaa dispersion rose from 0.81 to 1.47 after peaking at 1.91; and the NFCI credit subindex rose from -0.77 to -0.12 after peaking at -0.11. Higher values indicate tighter or more stressed credit conditions.",
+          "uri": "credit_market_timeseries.csv",
+          "retrieved_at": null,
+          "retrieval_provider": null,
+          "authority_class": "unclassified",
+          "authority_score": null,
+          "authority_reason": null,
+          "authority_assessment": null,
+          "measurement_status": "measured_uncalibrated",
+          "distribution": {
+            "supported_by_evidence": 0.9999920129776643,
+            "materially_qualified": 0.0,
+            "contradicted_by_evidence": 0.0,
+            "insufficient_evidence": 0.0
+          },
+          "selected_relation": "supported_by_evidence",
+          "measurement": {
+            "method": "natural-label next-token law with unobserved vocabulary mass retained",
+            "returned_model": "openai/gpt-oss-20b",
+            "observed_alternatives": [
+              "supported_by_evidence"
+            ],
+            "unresolved_relation_probability": 7.99e-06
+          },
+          "unresolved_relation_probability": 7.99e-06,
+          "recheck": {
+            "measurement_status": "measured_uncalibrated",
+            "distribution": {
+              "supported_by_evidence": 0.999996542930667,
+              "materially_qualified": 0.0,
+              "contradicted_by_evidence": 0.0,
+              "insufficient_evidence": 0.0
+            },
+            "selected_relation": "supported_by_evidence",
+            "measurement": {
+              "method": "natural-label next-token law with unobserved vocabulary mass retained",
+              "returned_model": "openai/gpt-oss-20b",
+              "observed_alternatives": [
+                "supported_by_evidence"
+              ],
+              "unresolved_relation_probability": 3.46e-06
+            },
+            "unresolved_relation_probability": 3.46e-06
+          },
+          "recheck_relation_instability_tv": 2.26e-06
+        }
+      ],
+      "attribution_uncertainty": {
+        "measurement_status": "measured_uncalibrated",
+        "sources_measured": 1,
+        "attributable_probability_bounds": [
+          0.99999201,
+          0.99999201
+        ],
+        "residual_unattributed_probability_bounds": [
+          7.99e-06,
+          7.99e-06
+        ],
+        "contradiction_probability_bounds": [
+          0.0,
+          0.0
+        ],
+        "maximum_unresolved_relation_probability": 7.99e-06,
+        "dependence_assumption": "none; Frechet union bounds"
+      },
+      "attribution_status": "green",
+      "reasons": [
+        "The observed phrase has comparatively strong token-level support."
+      ],
+      "recommended_actions": []
+    },
+    {
+      "span_id": "claim-2",
+      "start": 35,
+      "end": 92,
+      "text": "stayed above its starting level at the latest observation",
+      "kind": "response phrase",
+      "status": "orange",
+      "continuation_uncertainty": 0.264188,
+      "phrase_probability": {
+        "method": "token-aligned complete-phrase probability",
+        "measurement_source": "same_generation",
+        "log_probability": -2.37769121,
+        "mean_token_log_probability": -0.26418791,
+        "geometric_mean_token_probability": 0.76782924,
+        "scored_tokens": 9,
+        "returned_model": "openai/gpt-oss-20b"
+      },
+      "prompt_instability": {
+        "mean_js": 0.240862,
+        "maximum_js": 0.240862,
+        "mean_logprob_shift": null,
+        "maximum_logprob_shift": null,
+        "mean_semantic_instability": 0.240862,
+        "maximum_semantic_instability": 0.240862,
+        "variants_tested": 1
+      },
+      "evidence_sensitivity": {
+        "mean_js": 1.0,
+        "mean_absolute_logprob_shift": null,
+        "mean_semantic_influence": 1.0,
+        "interventions_tested": 1,
+        "interpretation": "conditional sensitivity, not a causal effect"
+      },
+      "composition_stability": {
+        "mean_descent_defect": null,
+        "maximum_descent_defect": null,
+        "compositions_tested": 0,
+        "interpretation": "claim-level approximate descent under the declared presentation and evidence transformations"
+      },
+      "provenance": [
+        {
+          "source_id": "credit-timeseries-csv",
+          "title": "Deterministic summary of bundled ALFRED time series",
+          "passage": "From 2020-02-28 to 2020-05-01, the Baa corporate-minus-Treasury spread rose from 2.38 to 3.25 after peaking at 4.23; Baa-minus-Aaa dispersion rose from 0.81 to 1.47 after peaking at 1.91; and the NFCI credit subindex rose from -0.77 to -0.12 after peaking at -0.11. Higher values indicate tighter or more stressed credit conditions.",
+          "uri": "credit_market_timeseries.csv",
+          "retrieved_at": null,
+          "retrieval_provider": null,
+          "authority_class": "unclassified",
+          "authority_score": null,
+          "authority_reason": null,
+          "authority_assessment": null,
+          "measurement_status": "measured_uncalibrated",
+          "distribution": {
+            "supported_by_evidence": 0.999868988987846,
+            "materially_qualified": 4.539399849562691e-05,
+            "contradicted_by_evidence": 0.0,
+            "insufficient_evidence": 0.0
+          },
+          "selected_relation": "supported_by_evidence",
+          "measurement": {
+            "method": "natural-label next-token law with unobserved vocabulary mass retained",
+            "returned_model": "openai/gpt-oss-20b",
+            "observed_alternatives": [
+              "materially_qualified",
+              "supported_by_evidence"
+            ],
+            "unresolved_relation_probability": 8.562e-05
+          },
+          "unresolved_relation_probability": 8.562e-05,
+          "recheck": {
+            "measurement_status": "unassessed_declared_alternatives_unobservable",
+            "distribution": null
+          },
+          "recheck_relation_instability_tv": null
+        }
+      ],
+      "candidate_evidence": [
+        {
+          "source_id": "credit-timeseries-csv",
+          "title": "Deterministic summary of bundled ALFRED time series",
+          "passage": "From 2020-02-28 to 2020-05-01, the Baa corporate-minus-Treasury spread rose from 2.38 to 3.25 after peaking at 4.23; Baa-minus-Aaa dispersion rose from 0.81 to 1.47 after peaking at 1.91; and the NFCI credit subindex rose from -0.77 to -0.12 after peaking at -0.11. Higher values indicate tighter or more stressed credit conditions.",
+          "uri": "credit_market_timeseries.csv",
+          "retrieved_at": null,
+          "retrieval_provider": null,
+          "authority_class": "unclassified",
+          "authority_score": null,
+          "authority_reason": null,
+          "authority_assessment": null,
+          "measurement_status": "measured_uncalibrated",
+          "distribution": {
+            "supported_by_evidence": 0.999868988987846,
+            "materially_qualified": 4.539399849562691e-05,
+            "contradicted_by_evidence": 0.0,
+            "insufficient_evidence": 0.0
+          },
+          "selected_relation": "supported_by_evidence",
+          "measurement": {
+            "method": "natural-label next-token law with unobserved vocabulary mass retained",
+            "returned_model": "openai/gpt-oss-20b",
+            "observed_alternatives": [
+              "materially_qualified",
+              "supported_by_evidence"
+            ],
+            "unresolved_relation_probability": 8.562e-05
+          },
+          "unresolved_relation_probability": 8.562e-05,
+          "recheck": {
+            "measurement_status": "unassessed_declared_alternatives_unobservable",
+            "distribution": null
+          },
+          "recheck_relation_instability_tv": null
+        }
+      ],
+      "attribution_uncertainty": {
+        "measurement_status": "measured_uncalibrated",
+        "sources_measured": 1,
+        "attributable_probability_bounds": [
+          0.99991438,
+          0.99991438
+        ],
+        "residual_unattributed_probability_bounds": [
+          8.562e-05,
+          8.562e-05
+        ],
+        "contradiction_probability_bounds": [
+          0.0,
+          0.0
+        ],
+        "maximum_unresolved_relation_probability": 8.562e-05,
+        "dependence_assumption": "none; Frechet union bounds"
+      },
+      "attribution_status": "green",
+      "reasons": [
+        "The observed phrase has comparatively strong token-level support.",
+        "Prompt stability is incomplete or only weakly tested."
+      ],
+      "recommended_actions": [
+        "Run additional meaning-equivalent prompt variants."
+      ]
+    }
+  ],
+  "provenance_ranking": [
+    {
+      "source_id": "credit-timeseries-csv",
+      "title": "Deterministic summary of bundled ALFRED time series",
+      "status": "red",
+      "uncertainty_contribution": 0.0,
+      "phrase_law_influence_js": 1.0,
+      "semantic_influence_js": 1.0,
+      "maximum_phrase_law_influence_js": 1.0,
+      "maximum_semantic_influence_js": 1.0,
+      "semantic_claim_influence": 1.0,
+      "affected_spans": [
+        "claim-1",
+        "claim-2"
+      ],
+      "interventions": 2,
+      "interpretation": "removal materially changes or removes the matched claim",
+      "authority_class": "unclassified",
+      "authority_score": null,
+      "authority_reason": null,
+      "authority_assessment": null
+    }
+  ],
+  "provenance_ranking_interpretation": "Ranks conditional source-removal sensitivity. Positive contribution means the source raises the observed phrase's mean token log probability; negative contribution means it lowers it. These are not causal effects unless interventions were randomized.",
+  "recommended_actions": [
+    "Run additional meaning-equivalent prompt variants."
+  ],
+  "metadata": {
+    "model": "openai/gpt-oss-20b",
+    "provider_surface": "Together serverless GPT-OSS via Harmony chat template and output logprobs",
+    "interaction_abstraction": "together-harmony-batched-phrase-law-v2",
+    "provider_base_url": "https://api.together.xyz/v1",
+    "provider": {
+      "response_id": "oysDwQs-fdNmn-a3591c4cbdef0024",
+      "returned_model": "openai/gpt-oss-20b",
+      "system_fingerprint": null,
+      "channel": "final"
+    },
+    "measurement_method": "same-generation token log probabilities aggregated over claim-level spans; independently generated counterfactual answers with local deterministic claim alignment",
+    "claim_alignment": "local lexical hybrid (token Jaccard and normalized sequence similarity); not a calibrated entailment model",
+    "lexical_algebra_design": {
+      "base_context": "c",
+      "presentation_context": "g_p(c)",
+      "evidence_context": "g_e(c)",
+      "composed_context": "g_e(g_p(c))",
+      "composition_test": "compare B(g_e(c)) with B(g_e(g_p(c)))"
+    },
+    "counterfactual_responses": [
+      {
+        "counterfactual_id": "meaning-preserving-presentation-1",
+        "response": "Credit\u2011market stress rose and stayed above its 2020\u201102\u201128 level at the latest observation.",
+        "introduced_claims": []
+      },
+      {
+        "counterfactual_id": "remove-credit-timeseries-csv",
+        "response": "I cannot determine that from the information given.",
+        "introduced_claims": [
+          "I cannot determine that from the information given"
+        ]
+      },
+      {
+        "counterfactual_id": "remove-credit-timeseries-csv-after-presentation-1",
+        "response": "I cannot determine that from the data provided.",
+        "introduced_claims": []
+      }
+    ],
+    "prompt_variants": 1,
+    "source_removals": 1,
+    "composition_tests": 1,
+    "analysis_caps": {
+      "requested_maximum_phrases": 2,
+      "displayed_measured_phrases": 2,
+      "phrase_cap_applied_for_complete_relation_measurement": false,
+      "requested_maximum_sources": 3,
+      "sources_analyzed": 1,
+      "relation_measurements_per_displayed_claim_source_pair": 2,
+      "maximum_provider_calls": 32,
+      "prompt_variants": 1,
+      "source_removals": 1
+    },
+    "provider_budget": {
+      "provider_calls": 8,
+      "maximum_provider_calls": 32,
+      "estimated_input_tokens_reserved": 1483,
+      "maximum_estimated_input_tokens": 120000,
+      "actual_input_tokens": 1718,
+      "actual_output_tokens": 488,
+      "estimated_provider_cost_usd": 0.0001835
+    },
+    "preflight_budget": {
+      "planned_provider_calls": 4,
+      "maximum_provider_calls": 32,
+      "worst_case_estimated_input_tokens": 3980,
+      "maximum_estimated_input_tokens": 120000
+    },
+    "calibrated": false,
+    "analysis_mode": "evidence_grounded",
+    "evidence_supplied": true,
+    "evidence_origin": "user_supplied",
+    "retrieval_providers": [],
+    "training_provenance_available": false,
+    "retrieval_errors": [],
+    "retrieval_source_policy": null
+  },
+  "semantic_evidence_graph": {
+    "graph_type": "source_preserving_claim_evidence_sseg",
+    "nodes": [
+      {
+        "node_id": "query",
+        "node_type": "query",
+        "value": "Based only on the supplied time-series evidence, did credit-market stress rise, and did it remain above its starting level at the latest observation? Answer in one sentence of at most 15 words."
+      },
+      {
+        "node_id": "answer",
+        "node_type": "answer",
+        "value": "Yes, credit\u2011market stress rose and stayed above its starting level at the latest observation."
+      },
+      {
+        "node_id": "passage:credit-timeseries-csv",
+        "node_type": "evidence_passage",
+        "source_id": "credit-timeseries-csv",
+        "uri": "credit_market_timeseries.csv",
+        "authority_class": "unclassified"
+      },
+      {
+        "node_id": "claim:1",
+        "node_type": "answer_claim",
+        "value": "Yes, credit\u2011market stress rose"
+      },
+      {
+        "node_id": "claim:2",
+        "node_type": "answer_claim",
+        "value": "stayed above its starting level at the latest observation"
+      }
+    ],
+    "edges": [
+      {
+        "source": "query",
+        "target": "answer",
+        "edge_type": "conditions_generation"
+      },
+      {
+        "source": "passage:credit-timeseries-csv",
+        "target": "claim:1",
+        "edge_type": "claim_evidence_relation",
+        "distribution": {
+          "supported_by_evidence": 0.9999920129776643,
+          "materially_qualified": 0.0,
+          "contradicted_by_evidence": 0.0,
+          "insufficient_evidence": 0.0
+        },
+        "measurement_status": "measured_uncalibrated",
+        "recheck_distribution": {
+          "supported_by_evidence": 0.999996542930667,
+          "materially_qualified": 0.0,
+          "contradicted_by_evidence": 0.0,
+          "insufficient_evidence": 0.0
+        },
+        "recheck_relation_instability_tv": 2.26e-06
+      },
+      {
+        "source": "passage:credit-timeseries-csv",
+        "target": "claim:2",
+        "edge_type": "claim_evidence_relation",
+        "distribution": {
+          "supported_by_evidence": 0.999868988987846,
+          "materially_qualified": 4.539399849562691e-05,
+          "contradicted_by_evidence": 0.0,
+          "insufficient_evidence": 0.0
+        },
+        "measurement_status": "measured_uncalibrated",
+        "recheck_distribution": null,
+        "recheck_relation_instability_tv": null
+      },
+      {
+        "source": "claim:1",
+        "target": "answer",
+        "edge_type": "composes"
+      },
+      {
+        "source": "claim:2",
+        "target": "answer",
+        "edge_type": "composes"
+      }
+    ],
+    "factorization": "local claim-evidence relation kernels; no cross-source independence assumption"
+  },
+  "prompt": "Based only on the supplied time-series evidence, did credit-market stress rise, and did it remain above its starting level at the latest observation? Answer in one sentence of at most 15 words.",
+  "response": "Yes, credit\u2011market stress rose and stayed above its starting level at the latest observation.",
+  "public_budget": {
+    "day_utc": "2026-09-04",
+    "limit_usd": 3.0,
+    "debited_usd": 0.39,
+    "remaining_usd": 2.61,
+    "request_count": 9,
+    "accounting": "conservative pre-request debit",
+    "request_debit_usd": 0.05
+  },
+  "trace_id": "de79e0e8f4d39a4eaddc52e506b662cd",
+  "trace_url": "https://traces.belieflens.org/trace/de79e0e8f4d39a4eaddc52e506b662cd"
+}
