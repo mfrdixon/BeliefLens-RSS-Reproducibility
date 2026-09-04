@@ -1,0 +1,12 @@
+{
+  "prompt": "Based only on the supplied evidence, what changed in the policy rate?",
+  "auto_retrieve": false,
+  "evidence": [
+    {
+      "source_id": "illustrative-policy-release",
+      "title": "Illustrative policy release",
+      "uri": "https://example.org/illustrative-policy-release",
+      "passage": "At its meeting, the committee raised the target range from 5.00–5.25% to 5.25–5.50%."
+    }
+  ]
+}

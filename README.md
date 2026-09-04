@@ -40,6 +40,7 @@ The paper distinguishes two reproducibility tasks.
 - `examples/notebooks/finance/SPY_SGOV_public_reproduction.ipynb`: keyless, non-configurable reproduction of the frozen SPY/SGOV semantic-state and portfolio example. It makes no provider calls and falls back transparently to the archived API response when the public demonstration route is unavailable.
 - `examples/notebooks/finance/SPY_SGOV_authenticated_workflow.ipynb`: separate configurable workflow for user-supplied evidence. It requires a [BeliefLens API key](https://demo.belieflens.org/signup) and a user-supplied model-provider key, presents a cost estimate before execution and preserves the resulting audit certificate.
 - `examples/notebooks/finance/Stochastic_Semantic_Evidence_Graphs.ipynb`: keyless walkthrough of the semantic evidence graph, public diagnostics and the graph-backed API/certificate workflow.
+- `examples/notebooks/verity/Verity_public_API.ipynb`: branded, keyless walkthrough of the live Verity API, response processing, diagnostic plots, source-preserving graph visualization, LangChain integration and OpenTelemetry/Jaeger trace lookup. It uses a real bundled response unless live execution is explicitly enabled.
 - `examples/notebooks/finance/data/offline_reproduction/`: immutable inputs, measurements, fitted semantic-map artifact, diagnostics and expected outputs used by the finance notebooks.
 - `SHA256SUMS`: integrity hashes for the archived files.
 
@@ -82,6 +83,14 @@ examples/notebooks/finance/SPY_SGOV_public_reproduction.ipynb
 ```
 
 The authenticated companion is deliberately separate. Use it only when constructing a new private benchmark or collecting new model observations. Request access at <https://demo.belieflens.org/signup>, configure credentials as environment variables, inspect the returned cost estimate, and explicitly approve execution. Neither notebook requires Uvicorn; that package is needed only to run the complete BeliefLens backend locally. Never save credentials in a notebook.
+
+## Verity public API notebook
+
+Open `examples/notebooks/verity/Verity_public_API.ipynb` to inspect a real
+sanitized response without consuming service quota. Set `RUN_LIVE = True` only
+when you intend to make one request. Verity is powered by the BeliefLens analytics
+engine; the public interface is fixed, keyless and conservatively rate- and
+budget-limited. See `docs/PUBLIC_VERITY_API.md` for the complete request contract.
 
 ## Integrity check
 
